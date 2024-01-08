@@ -5,6 +5,11 @@ import store from '@/store'
 
 import '@/element'
 
+import '@/assets/css/global.css'
+import '@/assets/css/my-element.css'
+import '@/assets/css/btn.css'
+import '@/assets/iconfont/iconfont.css'
+
 Vue.config.productionTip = false
 
 new Vue({
