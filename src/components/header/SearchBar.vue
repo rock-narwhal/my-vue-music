@@ -1,23 +1,31 @@
 <template>
   <div class="search-bar">
     <div class="search-input">
-      <el-input style="width: 200px" placeholder="搜索" v-model="keywords" ref="searchInput"
-                prefix-icon="el-icon-search">
+      <el-input style="width: 200px"
+                placeholder="搜索"
+                v-model="keywords"
+                ref="searchInput"
+                prefix-icon="el-icon-search"
+                @input="handleInput"
+                clearable
+                @focus="getHotSearch"
+                @blur="showInfoTip=false"
+                @keyup.enter.native="toSearch">
       </el-input>
     </div>
 
-    <transition name="el-fade-in" v-show="true">
+    <transition name="el-fade-in">
       <!--          搜索栏下的弹窗-->
-      <div class="search-info-tip">
-        <div v-show="false">
+      <div class="search-info-tip" v-show="showInfoTip">
+        <div v-show="keywords === ''">
           <!--              搜索历史-->
-          <div class="search-his">
+          <div class="search-his" v-show="searchHis.length > 0">
             <span>搜索历史</span>
             <button class="clear-btn" @click="clearHis">
               <i class="el-icon-delete"></i>
             </button>
             <div class="his-wrap">
-              <button class="btn btn-wihte his-item font-12" v-for="val in searchHis" :key="val" @click="clickHis(val)">
+              <button class="btn btn-wihte his-item font-12" v-for="val in searchHis" :key="val" @click="clickHot(val)">
                 {{ val }}
               </button>
             </div>
@@ -44,7 +52,7 @@
             </div>
           </div>
         </div>
-        <div v-show="true">
+        <div v-show="keywords !== ''">
           <div class="search-suggest">
             <div class="search-suggest-wrap">
               <button class="no-btn">
@@ -63,7 +71,7 @@
                      :key="song.id"
                      class="item pointer text-hidden"
                      @click="playMusic(song.id)">
-                  {{ song.name }} - {{ song.artist[0].name }}
+                  {{ song.name }} - {{ song.artists[0].name }}
                 </div>
               </template>
             </suggest-list>
@@ -120,6 +128,7 @@
 
 <script>
 import SuggestList from "@/components/header/SuggestList"
+import {getHotSearch, getSuggest} from "@/api/api_other";
 
 export default {
   name: 'SearchBar',
@@ -130,71 +139,98 @@ export default {
   data() {
     return {
       keywords: '',
+      // 搜索建议框显示隐藏空控制
+      showInfoTip: false,
       searchHis: [
-        'in the end',
-        'outside',
-        'i just want run',
-        'go back',
-        'hello'
       ],
       hotList: [
-        {
-          alg: "alg_search_rec_hotquery_base_hotquery",
-          content: "",
-          iconType: 4,
-          iconUrl: "https://p1.music.126.net/IBKnY_RCYTUAALcqWhAT6g==/109951163967994693.png",
-          score: 75536,
-          searchWord: "安和桥",
-          source: 0,
-          url: "",
-        },
       ],
       suggestInfo: {
-        songs: [{
-          id: 'fu4hq23rftgqer',
-          name: 'song',
-          artist: [
-            {
-              name: "tom"
-            }
-          ]
-        }],
-        albums: [
-          {
-            id: 'fafa',
-            name: 'album',
-            artist: {
-              name: 'tom'
-            }
-          }
-        ],
-        artists: [
-          {
-            id: 'xxx',
-            name: 'tom'
-          }
-        ],
-        playlists: [
-          {
-            id: '123',
-            name: 'name'
-          }
-        ]
       }
     }
   },
+  created() {
+    this.getSearchHistory()
+  },
   methods: {
-    //  清楚历史记录
+    inputBlur(){
+      console.log("触发blur")
+      this.showInfoTip = false
+    },
+    // 跳转到搜索页面
+    toSearch() {
+      console.log('to search')
+      if (!this.keywords) return
+      this.$refs.searchInput.blur()
+      if (this.$route.path !== `/search?keywords=${this.keywords}`) {
+        console.log('跳转搜索页面')
+        this.$router.push(`/search?keywords=${encodeURIComponent(encodeURIComponent(this.keywords))}`)
+      }
+      this.setHistory(this.keywords)
+    },
+    // 更新搜索历史
+    setHistory(keywords) {
+      if (keywords) {
+        if (this.searchHis.find(item => item === keywords)) {
+          return
+        }
+        this.searchHis.unshift(keywords)
+        this.searchHis = this.searchHis.slice(0, 5)
+        window.localStorage.setItem('search', JSON.stringify(this.searchHis))
+      }
+    },
+    // 搜索栏输入，获取搜索建议
+    handleInput(val){
+      if(this.timer){
+        window.clearTimeout(this.timer)
+      }
+      this.timer = window.setTimeout(()=>{
+        this.getSuggest(val)
+      }, 500)
+    },
+    async getSuggest(val){
+      if(!val) return
+      const res = await getSuggest({keywords:val})
+      if(res.code !== 200) return
+      console.log('getSuggest ',res)
+      this.suggestInfo = res.result
+    },
+    getSearchHistory() {
+      let history = window.localStorage.getItem('search');
+      if (!history) return
+      let hisArr = JSON.parse(history)
+      this.searchHis = hisArr || []
+    },
+    //  清除历史记录
     clearHis() {
-      this.searchHis = this.searchHis.slice(0, this.searchHis.length)
+      this.$confirm('确认清除搜索历史吗?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        window.localStorage.removeItem('search')
+        this.searchHis.clear()
+      })
     },
-
-    //点击搜索历史项
-    clickHis() {
-
+    async getHotSearch(){
+      console.log("触发 getHotSearch")
+      this.showInfoTip = true
+      if(this.keywords){
+        await this.getSuggest(this.keywords)
+      }
+      if(this.hotList.length > 0) return
+      const res = await getHotSearch()
+      console.log('getHotSearch res',res)
+      if(res.code !== 200) return
+      this.hotList = res.data
     },
+    // 点击历史项或者搜索项
     clickHot(keyword) {
       console.log(keyword)
+      if(keyword){
+        this.keywords = keyword
+        this.toSearch()
+      }
     },
     //播放音乐
     playMusic(id) {
@@ -209,7 +245,7 @@ export default {
 
     },
     //跳转到歌单
-    toPlayListDetail(id){
+    toPlayListDetail(id) {
 
     }
   },
