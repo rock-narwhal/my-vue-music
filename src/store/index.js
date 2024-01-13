@@ -6,7 +6,9 @@ import mutations from './mutations'
 Vue.use(Vuex)
 
 const state = {
-
+    isLogin: false,
+    account :{},
+    profile: {}
 }
 
 const getters = {

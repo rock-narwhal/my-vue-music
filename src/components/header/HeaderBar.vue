@@ -16,11 +16,17 @@
     <div class="search-input">
       <SearchBar/>
     </div>
+    <div class="login-info font-12">{{ nickName }}</div>
+    <div class="avatar-wrap pointer">
+      <el-avatar :size="30" icon="el-icon-user-solid" :src="avatarUrl"></el-avatar>
+    </div>
   </div>
 </template>
 
 <script>
 import SearchBar from '@/components/header/SearchBar'
+import {mapState} from "vuex";
+
 export default {
   name: 'HeaderBar',
   components: {
@@ -28,6 +34,16 @@ export default {
   },
   data() {
     return {}
+  },
+  computed: {
+    ...mapState(['isLogin', 'account', 'profile']),
+
+    avatarUrl() {
+      return this.isLogin ? this.profile.avatarUrl : ''
+    },
+    nickName() {
+      return this.isLogin ? this.profile.nickName : '未登录'
+    }
   }
 }
 </script>
@@ -35,48 +51,69 @@ export default {
 <style scoped lang="less">
 @import '@/assets/less/lessConfig.less';
 
-.header-bar{
+.header-bar {
+  //display: flex;
+  align-items: center;
+  color: #ffffff;
+  //position: absolute;
+  background-color: @headRed;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  top: 0;
+  //border: 1px solid black;
+  padding-right: 20px;
+}
+
+.icon-logView {
+  font-size: 48px;
+  float: left;
+}
+
+.history-btn {
+  margin-left: 100px;
+  display: flex;
+  float: left;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  //width: 100%;
+  // border: 1px solid black;
+
+  .btn-circle {
     display: flex;
-    align-items: center;
+    height: 26px;
+    width: 26px;
+    outline: 0;
+    border: 0;
+    background-color: #e13e3e;
     color: #ffffff;
-    position: absolute;
-    background-color: @headRed;
-    height: 60px;
-    width: 100%;
-    top: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+  }
 }
 
-.icon-logView{
-    font-size: 48px;
+.search-input {
+  margin-left: 10px;
+  width: 220px;
+  height: 100%;
+  float: left;
+  //border: 1px solid black;
 }
 
-.history-btn{
-    margin-left: 100px;
-    display: flex;
-    // border: 1px solid black;
+.avatar-wrap {
+  float: right;
+  height: 100%;
+  display: flex;
+  align-items: center;
 
-    .btn-circle{
-        display: flex;
-        height: 26px;
-        width: 26px;
-        outline: 0;
-        border: 0;
-        background-color: #e13e3e;
-        color: #ffffff;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        margin-right: 10px;
-        cursor: pointer;
-    }
 }
 
-.search-input{
-    margin-left: 10px;
-    width: 220px;
-    height: 100%;
-    //border: 1px solid black;
+.login-info {
+  float: right;
+  margin-left: 10px;
 }
-
-
 </style>

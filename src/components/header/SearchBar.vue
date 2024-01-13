@@ -9,7 +9,6 @@
                 @input="handleInput"
                 clearable
                 @focus="getHotSearch"
-                @blur="showInfoTip=false"
                 @keyup.enter.native="toSearch">
       </el-input>
     </div>
@@ -19,31 +18,33 @@
       <div class="search-info-tip" v-show="showInfoTip">
         <div v-show="keywords === ''">
           <!--              搜索历史-->
-          <div class="search-his" v-show="searchHis.length > 0">
-            <span>搜索历史</span>
-            <button class="clear-btn" @click="clearHis">
-              <i class="el-icon-delete"></i>
-            </button>
+          <div class="search-his" v-show="keywords === ''">
+            <div class="his-title clearfix">
+              <div class="font-16">搜索历史</div>
+              <button class="no-btn" @click="clearHis">
+                <i class="el-icon-delete"></i>
+              </button>
+            </div>
             <div class="his-wrap">
-              <button class="btn btn-wihte his-item font-12" v-for="val in searchHis" :key="val" @click="clickHot(val)">
+              <button class="btn btn-white his-item font-12" v-for="val in searchHis" :key="val" @click="clickHot(val)">
                 {{ val }}
               </button>
             </div>
           </div>
           <!--              热搜榜-->
           <div class="search-hot">
-            <div class="hot-title font-12">热搜榜</div>
+            <div class="hot-title font-16">热搜榜</div>
             <div class="hot-item pointer"
                  :class="{'top-item':(index < 3)}"
                  v-for="(item,index) in hotList"
                  :key="item.searchWord"
                  @click="clickHot(item.searchWord)"
             >
-              <div class="item-index">{{ index }}</div>
+              <div class="item-index">{{ index + 1 }}</div>
               <div class="item-info">
                 <div class="key-word">
-                  <span>{{ item.searchWord }}</span>
-                  <span>{{ item.score }}</span>
+                  <span class="font-12 item-key">{{ item.searchWord }}</span>
+                  <span style="color: #c2c1c1" class="font-12 mleft-10">{{ item.score }}</span>
                 </div>
                 <div>
                   <span style="color: #999999" class="font-12">{{ item.content }}</span>
@@ -209,8 +210,8 @@ export default {
         type: 'warning'
       }).then(() => {
         window.localStorage.removeItem('search')
-        this.searchHis.clear()
-      })
+        this.searchHis = []
+      }).catch(()=>{})
     },
     async getHotSearch(){
       console.log("触发 getHotSearch")
@@ -274,13 +275,9 @@ export default {
 .search-bar {
   width: 100%;
   height: 100%;
-  //border: 1px solid black;
-  //position: relative;
-  //display: flex;
   position: relative;
 
   .search-input {
-    //border: 1px solid black;
     height: 100%;
     width: 100%;
     display: flex;
@@ -290,7 +287,6 @@ export default {
 
   .el-input {
     width: 100%;
-    //height: 100%;
     height: 36px;
     margin: auto;
     line-height: 36px;
@@ -300,34 +296,78 @@ export default {
     position: absolute;
     top: 80px;
     left: -70px;
-    border-radius: 10px;
-    border: 1px solid black;
+    transition: all 0.5s;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px #dddddd;
     width: 350px;
     height: 500px;
     color: black;
+    overflow-y: auto;
+    padding: 10px;
+
 
     .search-his {
-      margin: 10px;
-      width: 100%;
-
-      .his-wrap {
-        display: flex;
-        // 一行放不下则自动换行
-        flex-wrap: wrap;
-
-        button {
+      height: 100%;
+      .his-title{
+        width: 100%;
+        color: #666666;
+        div{
           float: left;
-          background-color: #ffffff;
-          border: 1px solid gray;
-          margin-right: 10px;
+          line-height: 24px;
+          height: 24px;
+        }
+        button{
+          margin-top: 4px;
+          float: left;
         }
       }
 
-      .clear-btn {
-        border: none;
-        background-color: #ffffff;
+      .his-wrap {
+        margin-top: 5px;
+        display: flex;
+        // 一行放不下则自动换行
+        flex-wrap: wrap;
+        align-items: center;
+
+        .his-item {
+          margin: 0 10px 10px 0;
+          height: 26px;
+        }
+      }
+    }
+    .search-hot{
+
+      .hot-title{
+        color: #666666;
+        height: 40px;
+      }
+      .hot-item{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        &:hover{
+          background-color: #f2f2f2;
+        }
+        .item-index{
+          color: #c2c2c2;
+          width: 40px;
+          text-align: center;
+        }
+      }
+      .top-item {
+        .item-index {
+          color: #e13e3e;
+        }
+
+        .item-key {
+          font-weight: bold;
+        }
       }
     }
   }
+}
+.search-suggest-wrap{
+  height: 30px;
+  line-height: 30px;
 }
 </style>
