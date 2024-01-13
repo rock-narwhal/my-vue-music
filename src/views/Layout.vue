@@ -10,10 +10,13 @@
             <div class="aside">
                 <LeftAside></LeftAside>
             </div>
-            <div class="content">
-                <!-- 内容区 -->
+          <!-- 内容区 -->
+            <div class="content" ref="scrollWrapRef">
+              <transition el-fade-in>
+                <router-view/>
+              </transition>
             </div>
-            <!-- 右侧抽屉栏 播放列表 -->
+            <!-- 右侧隐藏抽屉栏 播放列表 -->
             <div class="drawer">
                 <DrawerList></DrawerList>
             </div>
@@ -42,9 +45,44 @@ export default {
     },
     mounted(){
         console.log('layout组件被挂载')
-    }
+    },
+  watch:{
+      '$route.path'(val){
+        this.$refs.scrollWrapRef.scrollTop = 0
+        // 通知LeftAside
+        this.$bus.$emit('activeMenuChange',val)
+      }
+  }
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
+.main{
+  position: absolute;
+  top: 60px;
+  bottom: 80px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  .aside{
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-right: 1px solid #d7d0d0;
+  }
+  .content{
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  }
+}
+.footer{
+  position: absolute;
+  height: 80px;
+  bottom: 0px;
+  width: 100%;
+  border-top: 1px solid #d7d0d0;
+ }
 </style>

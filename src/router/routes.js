@@ -3,18 +3,20 @@ export default [
         name:'root',
         path:'/',
         component: ()=> import('@/views/Layout'),
-        // redirect:'homePage',
+        redirect:'homePage',
         children:[
             // 首页 发现音乐
             {
                 name:'HomePage',
-                path:'homePage',
+                path:'/homePage',
+                component: ()=> import('@/views/home/HomePage'),
                 redirect:'/personalrecom',
                 children: [
                     {
-                        path: 'personalrecom',
+                        path: '/personalrecom',
                         name:'PersonalRecom',
-
+                        component: ()=> import('@/views/home/PersonalRecom'),
+                        meta:{title: '个性推荐'}
                     }
                 ]
             }

@@ -9,6 +9,7 @@
                 @input="handleInput"
                 clearable
                 @focus="getHotSearch"
+                @blur="showInfoTip = false"
                 @keyup.enter.native="toSearch">
       </el-input>
     </div>
@@ -304,6 +305,7 @@ export default {
     color: black;
     overflow-y: auto;
     padding: 10px;
+    z-index: 99;
 
 
     .search-his {

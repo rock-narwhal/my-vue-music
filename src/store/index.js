@@ -12,7 +12,12 @@ const state = {
 }
 
 const getters = {
+    subscribePlaylist(){
 
+    },
+    createPlaylist(){
+
+    }
 }
 
 const store = new Vuex.Store({
