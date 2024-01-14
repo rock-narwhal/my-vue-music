@@ -65,7 +65,7 @@ export default {
   height: auto;
   display: flex;
   .aside{
-    width: 200px;
+    width: 235px;
     height: 100%;
     overflow-y: auto;
     box-sizing: border-box;

@@ -1,0 +1,11 @@
+<template>
+  <div></div>
+</template>
+<script>
+export default {
+  name: "PlayList"
+}
+</script>
+<style scoped lang="less">
+
+</style>

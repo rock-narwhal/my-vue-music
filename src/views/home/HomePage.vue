@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="router-list">
+    <div>
       <tab-menu :menuList="routeList" mode="route"></tab-menu>
     </div>
     <div>
@@ -23,11 +23,11 @@ export default {
   data(){
     return{
       routeList:[
-        { path: '/personalrecom', name: '个性推荐' },
-        { path: '/playlist', name: '歌单' },
-        { path: '/toplist', name: '排行榜' },
-        { path: '/artistlist', name: '歌手' },
-        { path: '/zuixin', name: '最新音乐' }
+        { path: '/homePage/personalrecom', name: '个性推荐' },
+        { path: '/homePage/playlist', name: '歌单' },
+        { path: '/homePage/toplist', name: '排行榜' },
+        { path: '/homePage/artistlist', name: '歌手' },
+        { path: '/homePage/zuixin', name: '最新音乐' }
       ]
     }
   }

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from '@/router'
 import store from '@/store'
+import VueLazyload from "vue-lazyload";
 
 import '@/element'
 
@@ -11,6 +12,13 @@ import '@/assets/css/btn.css'
 import '@/assets/iconfont/iconfont.css'
 
 Vue.config.productionTip = false
+
+Vue.use(VueLazyload,{
+  preLoad: 1.9,
+  error: require('@/assets/img/error.jpg'),
+  loading: require('@/assets/img/loading.gif'),
+  attempt: 3
+})
 
 new Vue({
   router,

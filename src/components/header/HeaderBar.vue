@@ -71,7 +71,7 @@ export default {
 }
 
 .history-btn {
-  margin-left: 100px;
+  margin-left: 55px;
   display: flex;
   float: left;
   height: 100%;
