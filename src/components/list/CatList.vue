@@ -1,14 +1,18 @@
 <template>
   <div class="cat-container">
-    <div class="header-title">{{title}}</div>
+    <div class="header-title" @click.stop="onTitleCLick">{{ title }}</div>
     <div class="cat-group" v-for="(catGroup,index) in catList" :key="index">
       <div class="group-title">
-        <i class="iconfont" :class="configs[index].icon"></i>
-        <span>{{configs[index].title}}</span>
+        <i class="iconfont font-24" :class="configs[index].icon"></i>
+        <span class="mleft-6">{{ configs[index].title }}</span>
       </div>
-      <div class="cat-list">
-        <div v-for="item in catGroup" :key="item.name">
-          <div :class="{active : item.isActive}">{{item.name}}</div>
+      <div class="cat-list font-14">
+        <div v-for="item in catGroup"
+             :key="item.name"
+             class="tag-item pointer"
+             :class="{active: item.isActive}"
+             @click.stop="onTagClick(item.name)">
+          {{ item.name }}
         </div>
       </div>
     </div>
@@ -18,54 +22,84 @@
 <script>
 export default {
   name: "CatList",
-  props:['title','catList','active'],
-  data(){
+  props: ['title', 'catList', 'clickTitle', 'clickTag'],
+  data() {
     return {
-      configs:[
+      configs: [
         {
-          title:'语种',
+          title: '语种',
           icon: 'icon-diqiuquanqiu'
         },
         {
-          title:'风格',
+          title: '风格',
           icon: 'icon-fengge'
         },
         {
-          title:'场景',
+          title: '场景',
           icon: 'icon-xiazai47'
         },
         {
-          title:'情感',
+          title: '情感',
           icon: 'icon-smiling'
         },
         {
-          title:'主题',
+          title: '主题',
           icon: 'icon-zhuti'
         },
       ]
+    }
+  },
+  methods: {
+    onTitleCLick() {
+      console.log('onTitleCLick')
+      this.clickTitle || this.clickTitle()
+    },
+    onTagClick(name) {
+      console.log('onTagClick', name)
+      this.clickTag(name)
     }
   }
 }
 </script>
 
 <style scoped lang="less">
-.cat-container{
-  width: 100%;
+.cat-container {
   height: 650px;
-  .header-title{
+  width: 720px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+
+  .header-title {
     width: 100%;
     height: 60px;
     line-height: 60px;
     padding-left: 10px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #e0e0e0;
   }
-  .cat-group{
+
+  .cat-group {
     display: flex;
     flex-wrap: wrap;
-
-    .cat-list{
+    margin: 20px 20px 0 20px;
+    justify-content: space-between;
+    //TODO 图标大小调节
+    .cat-list {
+      width: 550px;
       display: flex;
       flex-wrap: wrap;
+      //border: 1px solid coral;
+      //justify-content: space-between;
+      align-content: space-between;
+
+      .tag-item {
+        width: 90px;
+        height: 30px;
+
+        &:hover {
+          color: #ec4141;
+        }
+      }
     }
   }
 }

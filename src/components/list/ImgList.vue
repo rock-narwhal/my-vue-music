@@ -71,7 +71,7 @@ export default {
       this.$emit('clickImg',id)
     },
     picUrl(item) {
-      if(this.type == 'playlist'){
+      if(this.type === 'playlist'){
         return `${item.picUrl ? item.picUrl : item.coverImgUrl}?param=300y300`
       }else if(this.type === 'artist'){
         return `${item.img1v1Url}?param=300y300`

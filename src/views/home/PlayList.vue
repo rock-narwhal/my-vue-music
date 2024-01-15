@@ -18,39 +18,37 @@
       </div>
     </div>
     <!--    歌单标签-->
-    <div class="list-tag m-top10">
-      <!--      弹出式卡片 所有标签-->
-      <!--      <el-dropdown trigger="click">-->
-      <!--        <button class="circle-btn" @click="openLayer">-->
-      <!--          {{tagBtn}}-->
-      <!--          <i class="el-icon-arrow-right"></i>-->
-      <!--        </button>-->
-      <!--        <el-dropdown-menu slot="dropdown">-->
-      <!--          <el-dropdown-item>全部歌单</el-dropdown-item>-->
-      <!--        </el-dropdown-menu>-->
-      <!--      </el-dropdown>-->
-      <el-popover
-          placement="bottom-start"
-          width="720"
-          trigger="click"
-          :visible-arrow="false"
-          :append-to-body="false"
-          @click="getAllCats">
-        <CatList
-          title="全部歌单"
-          :catList="allCats"
-          :active="tagBtn"
-        ></CatList>
-        <button slot="reference" class="circle-btn" @click="getAllCats">
+    <div class="list-tag mtop-10 clearfix">
+      <div class="tag-list-left">
+        <button class="circle-btn pointer" @click="triggerCatList" @blur.stop="closeCatList">
           {{ tagBtn }}
           <i class="el-icon-arrow-right"></i>
         </button>
-      </el-popover>
+        <CatList class="tag-pop-list"
+                 title="全部歌单"
+                 :catList="allCats"
+                 v-show="showAllCats"
+                 :clickTitle="closeCatList"
+                 :clickTag="changeCat"></CatList>
+      </div>
 
       <!--      热门标签-->
+      <div class="tag-list-right">
+        <button v-for="(item,index) in hotCats" :key="index" class="no-btn pointer" @click="changeCat(item.name)">
+          {{ item.name }}
+        </button>
+      </div>
     </div>
 
     <!--    歌单列表-->
+    <ImgList type="playlist"
+             :list="playList"
+             class="mtop-10">
+      <template v-slot="{item}">
+        <div class="text-hidden"></div>
+        {{ item.name }}
+      </template>
+    </ImgList>
   </div>
 
 
@@ -58,15 +56,17 @@
 <script>
 import {getAllCat, getHighQuality, getHotCat, getPlayListByCat} from "@/api/api_playlist";
 import CatList from "@/components/list/CatList.vue";
+import ImgList from "@/components/list/ImgList.vue";
 
 export default {
   // 首页/歌单
   name: "PlayList",
   components: {
-    CatList,
+    CatList, ImgList,
   },
   data() {
     return {
+      showAllCats: false,
       isLoading: false,
       hasHighQuality: false,
       highInfo: {},
@@ -76,19 +76,20 @@ export default {
       queryInfo: {
         limit: 50,
         order: 'hot',
-        cat: '摇滚',
+        cat: '华语',
         offset: 0
       },
       pageInfo: {
         total: 0,
         currentPage: 1,
       },
-      tagBtn: '摇滚',//当前选中的标签
+      tagBtn: '华语',//当前选中的标签
     }
   },
   created() {
     this.getHostCats()
     this.getPlayList()
+    this.getAllCats()
   },
   methods: {
     // 热门分类
@@ -102,8 +103,8 @@ export default {
     },
     //所有分类
     async getAllCats() {
-      console.log('PlayList: getAllCats',this.allCats)
-      if(this.allCats.length > 0) return
+      console.log('PlayList: getAllCats', this.allCats)
+      if (this.allCats.length > 0) return
       const res = await getAllCat()
       if (res.code !== 200) return
       res.sub.forEach(item => {
@@ -127,13 +128,25 @@ export default {
       await this.getHighInfo(this.queryInfo.cat)
       const res = await getPlayListByCat(this.queryInfo)
       if (res.code !== 200) return
-      this.playList = res.playlist
+      this.playList = res.playlists
       this.pageInfo.total = res.total
       this.isLoading = false
     },
-
-    openLayer() {
-
+    changeCat(name) {
+      console.log('PlayList: changeCat', name)
+      this.tagBtn = name
+      this.queryInfo.cat = name
+      this.closeCatList()
+      this.getPlayList()
+    },
+    triggerCatList() {
+      this.showAllCats = !this.showAllCats
+    },
+    closeCatList() {
+      // 按钮的blur会在 tagClick回调前隐藏tag弹窗，导致tagClick回调失效，无法切换tag
+      setTimeout(() => {
+        this.showAllCats = false
+      }, 300)
     }
   }
 }
@@ -150,7 +163,6 @@ export default {
     align-items: center;
     overflow: hidden;
     position: relative;
-    border: 1px solid black;
 
     .img-back {
       position: absolute;
@@ -183,8 +195,28 @@ export default {
       }
     }
   }
+
+  .list-tag {
+    width: 100%;
+
+    .tag-list-left {
+      float: left;
+      position: relative;
+
+      .tag-pop-list {
+        position: absolute;
+        top: 40px;
+        z-index: 10;
+      }
+    }
+
+    .tag-list-right {
+      float: right;
+    }
+  }
 }
-.el-popover .el-popper{
+
+.el-popover .el-popper {
   padding: 0;
 }
 </style>

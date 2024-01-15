@@ -18,7 +18,7 @@
         热门推荐 <i class="iconfont icon-arrow-right"></i>
       </h2>
       <ImgList type="playlist"
-               @clickPlay="recSong"
+               @clickPlay="playRecSong"
                @clickImg="toPlayListDetail"
                :list="recSongList">
         <template v-slot="{item}">
@@ -110,13 +110,14 @@ export default {
       //   })
       // }
     },
-    // 播发选中的专辑/歌单
+    // 播放选中的专辑/歌单
     playRecommend(id) {
       // const list =
       const rec = this.recommendList.filter(item => item.id === id)
       console.log("PersonalRecom: playRecommend", id, rec)
     },
-    recSong(id) {
+    // 播放歌单中的歌曲
+    playRecSong(id) {
       const rec = this.recSongList.filter(item => item.id === id)
       console.log("PersonalRecom: playRecommend", id, rec)
     }
