@@ -20,16 +20,16 @@
     <!--    歌单标签-->
     <div class="list-tag mtop-10 clearfix">
       <div class="tag-list-left">
-        <button class="circle-btn pointer" @click="triggerCatList" @blur.stop="closeCatList">
+        <button class="circle-btn pointer" @click="triggerCatList" @blur="showAllCats=false">
           {{ tagBtn }}
           <i class="el-icon-arrow-right"></i>
+          <CatList class="tag-pop-list"
+                   title="全部歌单"
+                   :catList="allCats"
+                   v-show="showAllCats"
+                   :clickTitle="closeCatList"
+                   :clickTag="changeCat"></CatList>
         </button>
-        <CatList class="tag-pop-list"
-                 title="全部歌单"
-                 :catList="allCats"
-                 v-show="showAllCats"
-                 :clickTitle="closeCatList"
-                 :clickTag="changeCat"></CatList>
       </div>
 
       <!--      热门标签-->
@@ -49,6 +49,17 @@
         {{ item.name }}
       </template>
     </ImgList>
+    <!--    分页-->
+    <div class="pagination">
+      <el-pagination
+          background
+          layout="prev, pager, next"
+          :total="pageInfo.total"
+          @current-change="onPageChange"
+          @prev-click="onPageChange(pageInfo.currentPage -1)"
+          @next-click="onPageChange(pageInfo.currentPage -1)">
+      </el-pagination>
+    </div>
   </div>
 
 
@@ -143,10 +154,17 @@ export default {
       this.showAllCats = !this.showAllCats
     },
     closeCatList() {
-      // 按钮的blur会在 tagClick回调前隐藏tag弹窗，导致tagClick回调失效，无法切换tag
-      setTimeout(() => {
-        this.showAllCats = false
-      }, 300)
+      console.log('closeCatList')
+      this.showAllCats = false
+    },
+    onPageChange(page) {
+      console.log('onPageChange: ', page)
+      if (page < 1 || page > this.pageInfo.total || page === this.pageInfo.currentPage) return
+      this.pageInfo.currentPage = page
+      this.queryInfo.offset = (page - 1) * this.queryInfo.limit
+      this.getPlayList()
+      //滚到到顶部
+      this.$bus.$emit('scrollTop')
     }
   }
 }
@@ -203,9 +221,18 @@ export default {
       float: left;
       position: relative;
 
+      .circle-btn {
+        color: black;
+        border: 1px solid #cbcbcb;
+        &:hover{
+          background-color: #f2f2f2;
+        }
+      }
+
       .tag-pop-list {
         position: absolute;
         top: 40px;
+        left: -1px;
         z-index: 10;
       }
     }
@@ -213,6 +240,12 @@ export default {
     .tag-list-right {
       float: right;
     }
+  }
+  .pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
   }
 }
 

@@ -66,15 +66,16 @@ export default {
 .cat-container {
   height: 650px;
   width: 720px;
-  border: 1px solid #e0e0e0;
   border-radius: 8px;
   background-color: white;
+  box-shadow: 0 1px 4px #dddddd;
+  text-align: left;
 
   .header-title {
     width: 100%;
     height: 60px;
     line-height: 60px;
-    padding-left: 10px;
+    padding-left: 20px;
     border-bottom: 1px solid #e0e0e0;
   }
 

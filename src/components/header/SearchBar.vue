@@ -306,6 +306,7 @@ export default {
     overflow-y: auto;
     padding: 10px;
     z-index: 99;
+    background-color: white;
 
 
     .search-his {
