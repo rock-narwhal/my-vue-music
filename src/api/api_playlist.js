@@ -12,3 +12,5 @@ export const getAllCat = () => get('/playlist/catlist')
 export const getHighQuality = (limit, cat, before) => get('/top/playlist/highquality', {limit, cat, before})
 /* 根据分类获取歌单 */
 export const getPlayListByCat = ({limit, order, cat, offset}) => get('/top/playlist',{ limit, order, cat, offset })
+/* 歌单详情 */
+export const getPlayListDetail = (id) => get('/playlist/detail',{id})

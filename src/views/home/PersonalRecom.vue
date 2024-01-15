@@ -1,4 +1,5 @@
 <template>
+<!--  个性推荐页面-->
   <div class="container">
     <div class="swiper-wrap">
       <el-carousel :interval="4000" type="card" :height="bannerHeight + 'px'">

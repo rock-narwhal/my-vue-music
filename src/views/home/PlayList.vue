@@ -1,4 +1,5 @@
 <template>
+<!--  歌单页面-->
   <div class="container">
     <!--    精品歌单banner-->
     <div class="banner" v-if="hasHighQuality">

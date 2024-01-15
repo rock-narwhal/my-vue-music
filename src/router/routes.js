@@ -22,7 +22,13 @@ export default [
                         path: 'playlist',
                         name: 'PlayList',
                         component: () => import('@/views/home/PlayList'),
-                        meta: {title: '歌单列表'}
+                        meta: {title: '首页歌单'}
+                    },
+                    {
+                        path: 'toplist',
+                        name: 'TopList',
+                        component: () => import('@/views/home/TopList'),
+                        meta: {title: '排行榜页面'}
                     }
                 ]
             }
