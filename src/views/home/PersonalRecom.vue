@@ -77,9 +77,10 @@ export default {
       // if(!this.isLogin) return
       const res = await getRecommend()
       if (res.code !== 200) return
-      res.recommend.forEach(item => {
-        this.recommendList.push(item)
-      })
+      this.recommendList.push(...res.recommend)
+      // res.recommend.forEach(item => {
+      //   this.recommendList.push(item)
+      // })
     },
     async getRecSongList(limit) {
       // if(this.isLogin) return

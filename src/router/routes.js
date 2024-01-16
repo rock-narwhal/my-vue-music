@@ -29,6 +29,12 @@ export default [
                         name: 'TopList',
                         component: () => import('@/views/home/TopList'),
                         meta: {title: '排行榜页面'}
+                    },
+                    {
+                        path: 'artistlist',
+                        name: 'ArtistList',
+                        component: ()=> import('@/views/home/ArtistsPage'),
+                        meta: {title: '歌手页'}
                     }
                 ]
             }
