@@ -35,7 +35,28 @@ export default [
                         name: 'ArtistList',
                         component: ()=> import('@/views/home/ArtistsPage'),
                         meta: {title: '歌手页'}
-                    }
+                    },
+                    {
+                        path: 'latest',
+                        name: 'LatestPage',
+                        redirect:'/homePage/latest/songs',
+                        component: ()=> import('@/views/home/LatestPage'),
+                        meta: {title: '最新音乐'},
+                        children:[
+                            {
+                                path: 'songs',
+                                name: 'LatestSongPage',
+                                component: ()=> import('@/views/home/latest/LatestSongPage'),
+                                meta: {title: '新歌速递'}
+                            },
+                            {
+                                path: 'albums',
+                                name: 'LatestAlbumPage',
+                                component: ()=> import('@/views/home/latest/LatestAlbumPage'),
+                                meta: {title: '新碟上架'}
+                            },
+                        ]
+                    },
                 ]
             }
         ]
