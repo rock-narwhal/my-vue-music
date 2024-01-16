@@ -46,13 +46,18 @@ export default {
   },
   methods:{
     scrollTop(){
-      this.$refs.scrollWrapRef.scrollTop = 0
+      // this.$refs.scrollWrapRef || (this.$refs.scrollWrapRef.scrollTop = 0)
+      //TODO scrollTop undefined???
+      if(this.$refs.scrollWrapRef){
+        console.log('scrollTop : ',this.$refs.scrollWrapRef)
+      }
     }
   },
   mounted() {
-    console.log('layout组件被挂载')
+
   },
   created() {
+    console.log('layout组件被创建')
     this.$bus.$on('scrollTop',this.scrollTop)
   },
   watch: {
@@ -86,7 +91,7 @@ export default {
     overflow-y: auto;
     overflow-x: hidden;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 }
 
