@@ -36,7 +36,9 @@ export default {
     //跳转
     toSub(index) {
       this.activeIndex = index
-      this.$router.push(this.menuList[index].path)
+      if(this.$route.path !== this.menuList[index].path){ // 避免路由原地tp的报错
+        this.$router.push(this.menuList[index].path)
+      }
     }
   },
   watch: {

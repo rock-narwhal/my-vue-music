@@ -4,15 +4,14 @@ export default {
   data() {
     return {
       activePage: 0, // 0 新歌  1 新碟
+      routes :['/homePage/latest/songs','/homePage/latest/albums']
     }
   },
   methods: {
     toSubPage(active) {
       this.activePage = active
-      if (active === 0){
-        this.$router.push('/homePage/latest/songs')
-      }else{
-        this.$router.push('/homePage/latest/albums')
+      if(this.$route.path !== this.routes[active]){
+        this.$router.push(this.routes[active])
       }
     }
   }
@@ -23,8 +22,8 @@ export default {
   <div class="container">
     <div class="top-btn-wrap">
       <div class="btn-outer">
-        <button :class="{'active-btn': activePage === 0}" @click="toSubPage(0)">新歌速递</button>
-        <button :class="{'active-btn': activePage === 1}" @click="toSubPage(1)">新碟上架</button>
+        <button class="no-btn" :class="{'active-btn': activePage === 0}" @click="toSubPage(0)">新歌速递</button>
+        <button class="no-btn" :class="{'active-btn': activePage === 1}" @click="toSubPage(1)">新碟上架</button>
       </div>
     </div>
     <router-view></router-view>
@@ -32,5 +31,27 @@ export default {
 </template>
 
 <style scoped lang="less">
-
+.container {
+  padding: 0 15%;
+  .top-btn-wrap {
+    width: 100%;
+    .btn-outer{
+      height: 32px;
+      width: 202px;
+      margin: auto;
+      border: 1px solid black;
+      box-sizing: border-box;
+      border-radius: 15px;
+      button{
+        height: 30px;
+        width: 100px;
+        border-radius: 15px;
+      }
+      button.active-btn{
+        background-color: #d0d0d0;
+        color: white;
+      }
+    }
+  }
+}
 </style>

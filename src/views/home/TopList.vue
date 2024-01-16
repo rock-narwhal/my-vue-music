@@ -10,8 +10,7 @@
     <ImgList type="playlist"
              :list="globalTopList"
              @clickPlay="clickPlay"
-             @clickImg="toListDetail"
-    >
+             @clickImg="toListDetail">
       <template v-slot="{item}">
         {{item.name}}
       </template>

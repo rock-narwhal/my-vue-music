@@ -79,8 +79,10 @@ export default {
     }
   },
   methods: {
-    handleSelect(index, indexPath) {
-      console.log('handleSelect', index, indexPath)
+    handleSelect(index) {
+      if(this.$route.path !== index){
+        this.$router.push(index)
+      }
     },
     subPath(id) {
       if (typeof id === 'number') return `/playlistdetail/${id}`
