@@ -27,7 +27,7 @@ export default {
         { path: '/homePage/playlist', name: '歌单' },
         { path: '/homePage/toplist', name: '排行榜' },
         { path: '/homePage/artistlist', name: '歌手' },
-        { path: '/homePage/zuixin', name: '最新音乐' }
+        { path: '/homePage/latest', name: '最新音乐' }
       ]
     }
   }

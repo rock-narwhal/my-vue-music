@@ -46,11 +46,7 @@ export default {
   },
   methods:{
     scrollTop(){
-      // this.$refs.scrollWrapRef || (this.$refs.scrollWrapRef.scrollTop = 0)
-      //TODO scrollTop undefined???
-      if(this.$refs.scrollWrapRef){
-        console.log('scrollTop : ',this.$refs.scrollWrapRef)
-      }
+      this.$refs.scrollWrapRef.scrollTop = 0
     }
   },
   mounted() {
