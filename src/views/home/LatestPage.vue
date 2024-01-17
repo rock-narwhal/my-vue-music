@@ -39,13 +39,17 @@ export default {
       height: 32px;
       width: 202px;
       margin: auto;
-      border: 1px solid black;
+      border: 1px solid #d0d0d0;
       box-sizing: border-box;
       border-radius: 15px;
       button{
         height: 30px;
         width: 100px;
         border-radius: 15px;
+        box-sizing: border-box;
+        &:hover{
+          background-color: #e7e7e7;
+        }
       }
       button.active-btn{
         background-color: #d0d0d0;
