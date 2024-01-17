@@ -1,41 +1,74 @@
 <script>
 import SelectorMenu from "@/components/menu/SelectorMenu.vue";
+import {getLatestAlbum} from "@/api/api_toplist";
+import ImgList from "@/components/list/ImgList.vue";
 
 export default {
   name: "LatestAlbumPage", // 新碟上架页
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    SelectorMenu,
+    SelectorMenu, ImgList,
   },
   data() {
     return {
-      menus: [{name: '全部', type: 0, active: true}, {name: '华语', type: 7, active: false},
-        {name: '欧美', type: 96, active: false}, {name: '日本', type: 8, active: false},
-        {name: '韩国', type: 16, active: false}]
+      menus: [{name: '全部', type: 'ALL', active: true}, {name: '华语', type: 'ZH', active: false},
+        {name: '欧美', type: 'EA', active: false}, {name: '日本', type: 'JP', active: false},
+        {name: '韩国', type: 'KR', active: false}],
+      albumList: [],
+      queryParam: {
+        area: 'ALL',
+        type: 'hot', // new:全部 hot:热门
+      }
     }
   },
-  methods:{
-    switchList(){
-
+  created() {
+    this.getAlbum()
+  },
+  methods: {
+    getAlbumByType(type) {
+      if (this.queryParam.type === type) return
+      this.queryParam.type = type
+      this.getAlbum()
+    },
+    getAlbumByArea(area) {
+      if (this.queryParam.area === area) return
+      this.queryParam.area = area
+      this.getAlbum()
+    },
+    async getAlbum() {
+      const res = await getLatestAlbum(this.queryParam)
+      if (res.code !== 200) return
+      this.albumList = res.monthData
     }
   }
 }
 </script>
 
 <template>
-  <div class="menu-bar">
-    <SelectorMenu :option="menus">
-      <template slot="rightBtn">
-        <button @click="switchList" class="no-btn">推荐</button>
-        <button @click="switchList" class="no-btn">全部</button>
+  <div>
+    <div class="menu-bar">
+      <SelectorMenu :option="menus" @clickTab="getAlbumByArea">
+        <template slot="rightBtn">
+          <button @click="getAlbumByType('hot')" class="no-btn" :class="{active: queryParam.type === 'hot'}">推荐</button>
+          <button @click="getAlbumByType('new')" class="no-btn" :class="{active: queryParam.type === 'new'}">全部</button>
+        </template>
+      </SelectorMenu>
+    </div>
+    <ImgList :list="albumList" type="album">
+      <template v-slot="{item}">
+        {{ item.name }}
       </template>
-    </SelectorMenu>
+    </ImgList>
   </div>
+
 </template>
 
 <style scoped lang="less">
-.menu-bar{
+.menu-bar {
   margin-top: 40px;
   margin-bottom: 20px;
+  button.active{
+    color: #ec4141;
+  }
 }
 </style>
