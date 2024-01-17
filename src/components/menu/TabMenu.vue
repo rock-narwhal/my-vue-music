@@ -4,7 +4,7 @@
          :key="index"
          @click="toSub(index)"
          class="pointer menu-item"
-         :class="{active: activeIndex === index}"
+         :class="{active: $route.path.startsWith(item.path)}"
     >
       <div v-if="mode === 'route'">{{ item.name }}</div>
       <div v-else >{{ item }}</div>
@@ -16,7 +16,6 @@
 <script>
 export default {
   name: "TabMenu",
-  // props: ['menuList', 'mode'],
   props:{
     menuList:{
       require: true,
@@ -27,27 +26,11 @@ export default {
       default: 'menu'
     }
   },
-  data() {
-    return {
-      activeIndex: 0,
-    }
-  },
   methods: {
     //跳转
     toSub(index) {
-      this.activeIndex = index
       if(this.$route.path !== this.menuList[index].path){ // 避免路由原地tp的报错
         this.$router.push(this.menuList[index].path)
-      }
-    }
-  },
-  watch: {
-    '$route.path':{
-      immediate: true,
-      handler(val){
-        if(this.mode === 'route'){
-          this.activeIndex = this.menuList.findIndex(item => item.path === val)
-        }
       }
     }
   }
@@ -59,7 +42,6 @@ export default {
 .menu-wrap{
   width: 100%;
   height: 60px;
-  //background-color: #999999;
   padding: 0 30px;
   display: flex;
   align-items: center;
