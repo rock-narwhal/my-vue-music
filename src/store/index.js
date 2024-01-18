@@ -14,6 +14,7 @@ const state = {
         type: 0, // 0 表示在播放单曲，1表示在播放歌单
         pause: false, // 暂停播放
         songId: '', //歌曲 id
+        src: '',
         coverUrl: '', //封面
         lyric:'', //歌词
         albumId: '', // 专辑id
