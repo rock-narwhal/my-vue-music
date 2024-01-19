@@ -20,6 +20,8 @@
       <div class="drawer">
         <DrawerList></DrawerList>
       </div>
+<!--      播放器页面-->
+      <div class="player-drawer"></div>
     </div>
     <!-- 底部音乐进度条 -->
     <div class="footer">
