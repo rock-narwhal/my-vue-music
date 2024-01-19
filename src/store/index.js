@@ -12,6 +12,7 @@ const state = {
     // 正在播放的歌曲的信息
     playingInfo:{
         type: 0, // 0 表示在播放单曲，1表示在播放歌单
+        mode: 0, // 0列表循环, 1 单曲循环 , 2 随机播放  ,3 列表顺序播放
         pause: false, // 暂停播放
         songId: '', //歌曲 id
         src: '',
