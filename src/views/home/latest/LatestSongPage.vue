@@ -2,6 +2,7 @@
 import SelectorMenu from "@/components/menu/SelectorMenu.vue";
 import {getLatestByType} from "@/api/api_toplist";
 import {mapState} from "vuex";
+import {timeConvert} from "@/util/dateUtil";
 
 export default {
   name: "LatestSongPage", // 新歌速递页
@@ -40,16 +41,11 @@ export default {
     collectAll() {
 
     },
-    timeConvert(milliscend) {
-      let min = Math.floor(milliscend / 60000)
-      let sec = Math.floor((milliscend / 1000) % 60)
-      if (min < 10) {
-        min = String(min).padStart(2, '0')
-      }
-      if (sec < 10) {
-        sec = String(sec).padStart(2, '0')
-      }
-      return min + ':' + sec
+    timeConvert(millisecond) {
+      return timeConvert(millisecond)
+    },
+    playSong(song){
+      this.$store.commit('playMusic', song)
     }
   }
 }
@@ -66,15 +62,15 @@ export default {
       </SelectorMenu>
     </div>
     <ul>
-      <li v-for="(item,index) in songList" :key="item.id">
+      <li v-for="(item,index) in songList" :key="item.id" @dblclick="playSong(item)">
         <div class="play-icon float-left">
           <span v-if="playingInfo.id !== item.id">{{ String(index + 1).padStart(2, '0') }}</span>
           <i v-else-if="playingInfo.pause" class="iconfont icon-shengyinguanbi"></i>
           <i v-else class="iconfont icon-shengyin"></i>
         </div>
         <div class="cover float-left">
-          <img :src="item.album.picUrl + '?param=100y100'" alt="">
-          <div class="play-btn pointer" @click.stop="clickPlay(item.id)">
+          <img v-lazy="item.album.picUrl + '?param=100y100'" alt="" @click="playSong(item)">
+          <div class="play-btn pointer">
             <i class="iconfont font-16 icon-bofang"></i>
           </div>
         </div>
@@ -84,7 +80,7 @@ export default {
         </div>
         <div class="artist float-left">{{ item.artists[0].name }}</div>
         <div class="album float-left">{{ item.album.name }}</div>
-        <div class="time-minute float-left">{{ timeConvert(item.duration) }}</div>
+        <div class="time-minute float-left">{{ timeConvert(item.duration / 1000) }}</div>
       </li>
     </ul>
   </div>

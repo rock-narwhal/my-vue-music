@@ -12,8 +12,10 @@ const state = {
     // 正在播放的歌曲的信息
     playingInfo:{
         type: 1, // 0 表示在播放单曲，1表示在播放歌单
-        mode: 0, // 0列表循环, 1 单曲循环 , 2 随机播放  ,3 列表顺序播放
-        pause: false, // 暂停播放
+        mode: 0, // 0循环播放, 1 单曲循环 , 2 随机播放  ,3 列表顺序播放
+        pause: true, // 暂停播放
+        current: 0, // 当前播放的时间点
+        duration: 186, // 歌曲时长
         songId: '', //歌曲 id
         like:'', // 是否喜爱该歌曲
         collect:'',// 是否收藏该歌曲
@@ -21,7 +23,8 @@ const state = {
         src: '',
         coverUrl: 'http://p2.music.126.net/CUgGGyE5KHiRsyR43mF3eQ==/109951163572864669.jpg', //封面
         lyric:'', //歌词
-        albumId: '', // 专辑id
+        // albumId: '', // 专辑id
+        album: {},
         artists:[{
             id:'1000000',
             name:'Linkin Park'
@@ -41,8 +44,8 @@ const getters = {
 }
 
 const store = new Vuex.Store({
-    state,
-    getters,
+    state : state,
+    getters : getters,
     actions,
     mutations
 })
