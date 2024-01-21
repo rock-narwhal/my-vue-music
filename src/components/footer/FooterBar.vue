@@ -172,8 +172,8 @@ export default {
     },
     // 播放、暂停切换
     playOrPause() {
-      console.log('playOrPause', this.playingInfo.pause)
       if (!this.playingInfo.songId) return
+      console.log('playOrPause', this.playingInfo.pause)
       this.playingInfo.pause = !this.playingInfo.pause
     },
   }

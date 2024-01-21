@@ -15,19 +15,19 @@ const state = {
         mode: 0, // 0循环播放, 1 单曲循环 , 2 随机播放  ,3 列表顺序播放
         pause: true, // 暂停播放
         current: 0, // 当前播放的时间点
-        duration: 186, // 歌曲时长
+        duration: 0, // 歌曲时长
         songId: '', //歌曲 id
         like:'', // 是否喜爱该歌曲
         collect:'',// 是否收藏该歌曲
-        name:'In the End', //歌曲名称
+        name:'未知音乐', //歌曲名称
         src: '',
-        coverUrl: 'http://p2.music.126.net/CUgGGyE5KHiRsyR43mF3eQ==/109951163572864669.jpg', //封面
+        coverUrl: require('@/assets/img/music.jpg'), //封面
         lyric:'', //歌词
         // albumId: '', // 专辑id
         album: {},
         artists:[{
-            id:'1000000',
-            name:'Linkin Park'
+            id:'0',
+            name:'未知歌手'
         }], //歌手/乐队
     },
     // 播放列表信息
