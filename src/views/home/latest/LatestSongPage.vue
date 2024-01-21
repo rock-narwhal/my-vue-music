@@ -69,8 +69,8 @@ export default {
           <i v-else class="iconfont icon-shengyin"></i>
         </div>
         <div class="cover float-left">
-          <img v-lazy="item.album.picUrl + '?param=100y100'" alt="" @click="playSong(item)">
-          <div class="play-btn pointer">
+          <img v-lazy="item.album.picUrl + '?param=100y100'" alt="">
+          <div class="play-btn pointer" @click="playSong(item)">
             <i class="iconfont font-16 icon-bofang"></i>
           </div>
         </div>

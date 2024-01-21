@@ -102,6 +102,21 @@ export default {
     'playingInfo.songId'() {
       console.log('songid 改变')
       this.getMusicUrl()
+      this.progress = 0
+    },
+    // 监听 播放暂停属性，触发播放器播放或暂停
+    'playingInfo.pause'() {
+      if(!this.playingInfo.src) return
+      let audio = this.$refs.audioRef
+      if (!audio) return
+      this.$nextTick(() => {
+        if (this.playingInfo.pause) {
+          audio.pause()
+        } else {
+          audio.play()
+        }
+      })
+
     }
   },
   methods: {
@@ -120,7 +135,7 @@ export default {
               '因版权方要求，该资源暂时无法播放，我们正在争取歌曲回归'
           )
         })
-        this.$store.commit('setPlayState', false)
+        this.$store.commit('setPauseState', true)
         return
       }
       this.$store.commit('setPlayingSrc', res.data[0].url)
@@ -135,30 +150,30 @@ export default {
     },
     // 拖动进度条
     changeProgress(val) {
-
+      let audio = this.$refs.audioRef
+      if (!audio) return
+      if (!this.playingInfo.songId) return
+      let current = Math.floor(this.playingInfo.duration * val / 100000)
+      if (this.playingInfo.current === current) return
+      audio.currentTime = current
+      this.$store.commit('updateCurrent', current)
     },
+    // 播放器播放进度改变回调
     updateCurrent() {
       let audio = this.$refs.audioRef
       if (!audio) return
       let second = Math.floor(audio.currentTime)
       if (this.playingInfo.current === second) return
       this.$store.commit('updateCurrent', second)
+      this.progress = Math.floor(second * 100000 / this.playingInfo.duration)
     },
     playFinish() {
-
+      this.$store.commit('setPauseState', true)
     },
     // 播放、暂停切换
     playOrPause() {
       console.log('playOrPause', this.playingInfo.pause)
       if (!this.playingInfo.songId) return
-      let audio = this.$refs.audioRef
-      console.log(audio)
-      if (!audio) return
-      if (this.playingInfo.pause) {
-        audio.play()
-      } else {
-        audio.pause()
-      }
       this.playingInfo.pause = !this.playingInfo.pause
     },
   }

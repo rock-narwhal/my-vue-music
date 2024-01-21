@@ -3,23 +3,34 @@ export default{
     updateCurrent(state, second){
         state.playingInfo.current = second
     },
+    // 播放音乐
     playMusic(state, music){
         console.log("mutation playMusic state : ",state.playingInfo)
         console.log("mutation playMusic music : ",music)
+        state.playingInfo.songId = music.id
         state.playingInfo.type = 0
-        state.playingInfo.pause = false
         state.playingInfo.current = 0
         state.playingInfo.duration = music.duration
-        state.playingInfo.songId = music.id
         state.playingInfo.name = music.name
         state.playingInfo.coverUrl = music.album.picUrl
         state.playingInfo.album = music.album
         state.playingInfo.artists = music.artists
         console.log("mutation playMusic state : ",state.playingInfo)
+        this.commit('addToPlayList', music)
+        state.playingInfo.pause = false
     },
-    setPlayState(state, payload){
+    // 添加到播放列表
+    addToPlayList(state, music){
+        let find = state.playList.find(item => item.id === music.id);
+        if(!find){
+            state.playList.unshift(music)
+        }
+    },
+    // 播放状态
+    setPauseState(state, payload){
         state.playingInfo.pause = payload
     },
+    // 播放的音乐源
     setPlayingSrc(state, payload){
         state.playingInfo.src = payload
     }
