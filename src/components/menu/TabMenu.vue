@@ -23,14 +23,17 @@ export default {
     },
     mode:{
       type: String,
-      default: 'menu'
+      default: 'menu', // menu / route
+    },
+    query:{ // 请求参数
+
     }
   },
   methods: {
     //跳转
     toSub(index) {
       if(this.$route.path !== this.menuList[index].path){ // 避免路由原地tp的报错
-        this.$router.push(this.menuList[index].path)
+        this.$router.push({path: this.menuList[index].path, query:this.query})
       }
     }
   }

@@ -58,6 +58,22 @@ export default [
                         ]
                     },
                 ]
+            },
+            {
+                name:'SearchPage',
+                path:'search',
+                // props: (route) => ({ keywords: route.query.keywords }),
+                props: true,
+                component: () => import('@/views/search/SearchPage'),
+                redirect:'/search/songs',
+                children:[
+                    {
+                        name:'SearchSongs',
+                        path:'songs',
+                        props: true,
+                        component: ()=> import('@/views/search/SearchSongs.vue')
+                    }
+                ]
             }
         ]
     }
