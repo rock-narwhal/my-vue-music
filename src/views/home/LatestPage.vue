@@ -10,9 +10,7 @@ export default {
   methods: {
     toSubPage(active) {
       this.activePage = active
-      if(this.$route.path !== this.routes[active]){
         this.$router.push(this.routes[active])
-      }
     }
   }
 }

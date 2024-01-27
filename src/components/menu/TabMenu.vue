@@ -32,9 +32,7 @@ export default {
   methods: {
     //跳转
     toSub(index) {
-      if(this.$route.path !== this.menuList[index].path){ // 避免路由原地tp的报错
-        this.$router.push({path: this.menuList[index].path, query:this.query})
-      }
+      this.$router.push({path: this.menuList[index].path, query:this.query})
     }
   }
 }

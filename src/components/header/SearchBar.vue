@@ -164,10 +164,8 @@ export default {
       console.log('to search')
       if (!this.keywords) return
       this.$refs.searchInput.blur()
-      if (this.$route.path !== `/search?keywords=${this.keywords}`) {
-        console.log('跳转搜索页面')
-        this.$router.push(`/search?keywords=${encodeURIComponent(encodeURIComponent(this.keywords))}`)
-      }
+      console.log('跳转搜索页面')
+      this.$router.push(`/search/songs?keywords=${encodeURIComponent(this.keywords)}`)
       this.setHistory(this.keywords)
     },
     // 更新搜索历史
