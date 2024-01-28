@@ -72,6 +72,24 @@ export default [
                         path:'songs',
                         props: true,
                         component: ()=> import('@/views/search/SearchSongs.vue')
+                    },
+                    {
+                        name:'SearchAlbum',
+                        path:'albums',
+                        props: true,
+                        component: ()=> import('@/views/search/SearchAlbums.vue')
+                    },
+                    {
+                        name:'SearchArtists',
+                        path: 'artists',
+                        props: true,
+                        component: ()=> import('@/views/search/SearchArtists.vue')
+                    },
+                    {
+                        name:'SearchPlaylist',
+                        path: 'playlist',
+                        props: true,
+                        component: ()=>import('@/views/search/SearchPlaylist.vue')
                     }
                 ]
             }

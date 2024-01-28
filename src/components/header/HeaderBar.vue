@@ -44,6 +44,11 @@ export default {
     nickName() {
       return this.isLogin ? this.profile.nickName : '未登录'
     }
+  },
+  methods:{
+    goTo(step){
+      this.$router.go(step)
+    }
   }
 }
 </script>

@@ -194,13 +194,13 @@ export default {
   .left-area {
     overflow: hidden;
     position: relative;
-    height: 160px;
+    height: 80px;
     width: 280px;
   }
 
   .cover-wrap {
 
-    height: 100%;
+    height: 160px;
     position: absolute;
     top: -80px;
     width: 100%;

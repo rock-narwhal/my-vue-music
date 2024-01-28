@@ -25,14 +25,14 @@ export default {
       type: String,
       default: 'menu', // menu / route
     },
-    query:{ // 请求参数
+    query:{
 
     }
   },
   methods: {
     //跳转
     toSub(index) {
-      this.$router.push({path: this.menuList[index].path, query:this.query})
+      this.$router.push({path: this.menuList[index].path, query: this.query})
     }
   }
 }
