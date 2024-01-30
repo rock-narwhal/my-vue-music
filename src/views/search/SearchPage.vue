@@ -54,18 +54,20 @@ export default {
 </script>
 
 <template>
-  <div>
-    <div class="font-20" style="font-weight: bold">搜索 {{ $route.query.keywords }}</div>
-    <!--  你可能感兴趣-->
-    <div class="font-12">你可能感兴趣</div>
-    <PlayListBanner :playlist="suggest"></PlayListBanner>
-    <TabMenu :menu-list="menuList" mode="route" :query="$route.query"></TabMenu>
-    <transition name="el-fade-in">
-      <router-view></router-view>
-    </transition>
-  </div>
+    <div class="container">
+      <div class="font-20" style="font-weight: bold">搜索 {{ $route.query.keywords }}</div>
+      <!--  你可能感兴趣-->
+      <div><svg-icon class="font-18" icon-class="music"></svg-icon>你可能感兴趣</div>
+      <PlayListBanner :playlist="suggest" v-show="suggest.id"></PlayListBanner>
+      <TabMenu :menu-list="menuList" mode="route" :query="$route.query"></TabMenu>
+      <transition name="el-fade-in">
+        <router-view></router-view>
+      </transition>
+    </div>
 </template>
 
 <style scoped lang="less">
-
+.container{
+  padding: 0 30px;
+}
 </style>

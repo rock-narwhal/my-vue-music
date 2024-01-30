@@ -1,28 +1,27 @@
 <script>
 export default {
   name: "SearchListItem",
-  props:{
-    list:{
+  props: {
+    list: {
       require: true,
-      type: Object
+      type: Array
     },
-    mode:{
+    mode: {
       default: 'ar', // ar 歌手  al 专辑  pl 歌单   dj 播客   vo  声音
     },
-    coverWidth:{
+    coverWidth: {
       default: 50,// 左侧封面加名称
       type: Number
     }
   },
-  computed:{
-  },
-  methods:{
-    clickItem(){
-      this.$emit('clickItem',this.dataItem.id)
+  computed: {},
+  methods: {
+    clickItem() {
+      this.$emit('clickItem', this.dataItem.id)
     },
-    getCoverImg(item){
+    getCoverImg(item) {
       let url = ''
-      switch (this.mode){
+      switch (this.mode) {
         case 'ar':
           url = item.picUrl
           break
@@ -40,47 +39,51 @@ export default {
 </script>
 
 <template>
-  <ul v-show="!isLoading">
-  <li v-for="item in list" :key="item.id">
-    <div @click="clickItem" class="clearfix container">
-      <div class="img-wrap float-item" :style="{'width': `${coverWidth}%`}">
-        <img v-lazy="getCoverImg(item)" alt="">
-        {{item.name}}
+  <ul>
+    <li v-for="item in list" :key="item.id">
+      <div @click="clickItem" class="clearfix container">
+        <div class="img-wrap float-item" :style="{'width': `${coverWidth}%`}">
+          <img v-lazy="getCoverImg(item)" alt="">
+          {{ item.name }}
+        </div>
+        <div class="float-item clearfix" :style="{'width': `${100 - coverWidth}%`}">
+          <slot v-bind:scope="item"></slot>
+        </div>
       </div>
-      <div class="float-item clearfix" :style="{'width': `${100 - coverWidth}%`}">
-        <slot v-bind:scope="item"></slot>
-      </div>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ul>
 
 
 </template>
 
 <style scoped lang="less">
-ul{
-  li{
-    &:nth-child(odd){
+ul {
+  li {
+    &:nth-child(odd) {
       background-color: #f3f3f3;
     }
   }
 }
-.container{
+
+.container {
   height: 80px;
   width: 100%;
   display: flex;
   align-items: center;
-  .img-wrap{
+
+  .img-wrap {
     height: 60px;
     line-height: 60px;
-    img{
+
+    img {
       height: 60px;
       margin-right: 10px;
       vertical-align: middle;
       border-radius: 5px;
     }
   }
-  .float-item{
+
+  .float-item {
     float: left;
   }
 }

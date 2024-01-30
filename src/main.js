@@ -10,6 +10,7 @@ import '@/assets/css/global.css'
 import '@/assets/css/my-element.css'
 import '@/assets/css/btn.css'
 import '@/assets/iconfont/iconfont.css'
+import '@/assets/icons'
 
 Vue.config.productionTip = false
 
