@@ -55,10 +55,11 @@ export default {
 
 <template>
     <div class="container">
-      <div class="font-20" style="font-weight: bold">搜索 {{ $route.query.keywords }}</div>
+      <div class="font-20 margin-30" style="font-weight: bold">搜索 {{ $route.query.keywords }}</div>
       <!--  你可能感兴趣-->
-      <div><svg-icon class="font-18" icon-class="music"></svg-icon>你可能感兴趣</div>
-      <PlayListBanner :playlist="suggest" v-show="suggest.id"></PlayListBanner>
+<!--      <svg-icon class="font-18" icon-class="music"></svg-icon>-->
+      <div class="margin-30">你可能感兴趣</div>
+      <PlayListBanner class="margin-30" :playlist="suggest" v-show="suggest.id"></PlayListBanner>
       <TabMenu :menu-list="menuList" mode="route" :query="$route.query"></TabMenu>
       <transition name="el-fade-in">
         <router-view></router-view>
@@ -67,7 +68,7 @@ export default {
 </template>
 
 <style scoped lang="less">
-.container{
-  padding: 0 30px;
+.margin-30{
+  margin: 0 30px;
 }
 </style>
