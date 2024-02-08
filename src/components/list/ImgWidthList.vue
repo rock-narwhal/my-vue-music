@@ -9,13 +9,33 @@ export default {
     mode: {
       default: 'ar', // ar 歌手  al 专辑  pl 歌单   dj 播客   vo  声音
     },
+    hasMore: {
+      type: Boolean,
+      default: false
+    },
+    infinite: {
+      type: Boolean,
+      default: false
+    },
+    isLoading: {
+      type: Boolean,
+      default: false
+    },
     coverWidth: {
       default: 50,// 左侧封面加名称
       type: Number
     }
   },
-  computed: {},
+  computed: {
+    //无限加载
+    disabled() {
+      return !this.infinite || !this.hasMore || this.isLoading
+    }
+  },
   methods: {
+    load(){
+      if(this.hasMore) this.$emit('loadMore', this.list.length)
+    },
     clickItem(id) {
       this.$emit('clickItem', id)
     },
@@ -40,7 +60,12 @@ export default {
 
 <template>
   <ul>
-    <li v-for="item in list" :key="item.id">
+    <li v-for="item in list"
+        :key="item.id"
+        v-infinite-scroll="load"
+        :infinite-scroll-disabled="disabled"
+        infinite-scroll-delay="300"
+    >
       <div @click="clickItem(item.id)" class="clearfix container">
         <div class="img-wrap float-item" :style="{'width': `${coverWidth}%`}">
           <img v-lazy="getCoverImg(item)" alt="">

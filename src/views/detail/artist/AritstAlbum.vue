@@ -1,6 +1,11 @@
 <script>
 export default {
-  name: "AritstAlbum"
+  name: "AritstAlbum",
+  data(){
+    return{
+      albums:[]
+    }
+  }
 }
 </script>
 

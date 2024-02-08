@@ -1,12 +1,12 @@
 <script>
-import SearchListItem from "@/components/search/SearchList.vue";
+import ImgWidthList from "@/components/list/ImgWidthList.vue";
 import {cloudSearch} from "@/api/api_music";
 import {toCNNum} from "@/util/formatUtil";
 
 export default {
   name: "SearchPlaylist",
   components: {
-    SearchListItem,
+    ImgWidthList,
   },
   data() {
     return {
@@ -51,13 +51,13 @@ export default {
 <template>
   <div class="">
     <el-skeleton :rows="10" animated v-show="isLoading"></el-skeleton>
-    <SearchListItem :list="list" mode="pl">
+    <ImgWidthList :list="list" mode="pl">
       <template v-slot="{scope}">
         <div class="float-item track-count">{{ scope.trackCount }} 首</div>
         <div class="float-item ar-name">by {{ scope.creator.nickname }}</div>
         <div class="float-item play-count"><i class="iconfont icon-bofang"></i> {{ numConvert(scope.playCount) }}</div>
       </template>
-    </SearchListItem>
+    </ImgWidthList>
   </div>
 
 </template>

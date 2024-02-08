@@ -1,11 +1,11 @@
 <script>
-import SearchListItem from "@/components/search/SearchList.vue";
+import ImgWidthList from "@/components/list/ImgWidthList.vue";
 import {cloudSearch} from "@/api/api_music";
 
 export default {
   name: "SearchAlbums",
   components: {
-    SearchListItem,
+    ImgWidthList,
   },
   data() {
     return {
@@ -48,11 +48,11 @@ export default {
   <div class="album-wrap">
     <!--  搜索 单曲页面  {{$route.query}}-->
     <el-skeleton :rows="10" animated v-show="isLoading"></el-skeleton>
-    <SearchListItem :list="list" mode="al">
+    <ImgWidthList :list="list" mode="al">
       <template v-slot="{scope}">
         {{ scope.artist.name }} <span v-if="scope.artist.trans">({{ scope.artist.trans }})</span>
       </template>
-    </SearchListItem>
+    </ImgWidthList>
   </div>
 </template>
 
