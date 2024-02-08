@@ -59,6 +59,7 @@ export default {
 <style scoped lang="less">
 ul {
   li {
+    padding: 0 30px;
     &:nth-child(odd) {
       background-color: #f3f3f3;
     }
