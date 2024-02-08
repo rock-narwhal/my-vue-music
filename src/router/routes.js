@@ -59,6 +59,7 @@ export default [
                     },
                 ]
             },
+            //搜索
             {
                 name:'SearchPage',
                 path:'search',
@@ -90,6 +91,44 @@ export default [
                         path: 'playlist',
                         props: true,
                         component: ()=>import('@/views/search/SearchPlaylist.vue')
+                    }
+                ]
+            },
+            //详情
+            {
+                name:'Detail',
+                path:'detail',
+                props: true,
+                component: ()=> import('@/views/detail/DetailPage'),
+                children:[
+                    {
+                        name:'ArtistDetail',
+                        path:'artist',
+                        props: true,
+                        component: ()=> import('@/views/detail/artist/ArtistDetail.vue'),
+                        redirect: '/detail/artist/album',
+                        children:[
+                            {
+                                name:'ArtistAlbum',
+                                path:'album',
+                                component: ()=> import('@/views/detail/artist/AritstAlbum.vue')
+                            },
+                            {
+                                name:'ArtistMV',
+                                path: "mv",
+                                component: ()=>import('@/views/detail/artist/ArtistMV.vue')
+                            },
+                            {
+                                name: 'ArtistInfo',
+                                path: 'info',
+                                component: ()=> import('@/views/detail/artist/ArtistInfo.vue')
+                            },
+                            {
+                                name: 'SimilarArtist',
+                                path: 'similar',
+                                component: ()=> import('@/views/detail/artist/SimilarArtist.vue')
+                            }
+                        ]
                     }
                 ]
             }

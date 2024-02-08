@@ -60,7 +60,7 @@ export default {
 <!--      <svg-icon class="font-18" icon-class="music"></svg-icon>-->
       <div class="margin-30" style="margin-bottom: 10px">你可能感兴趣</div>
       <PlayListBanner class="margin-30" :playlist="suggest" v-show="suggest.id"></PlayListBanner>
-      <TabMenu :menu-list="menuList" mode="route" :query="$route.query"></TabMenu>
+      <TabMenu class="margin-30" :menu-list="menuList" mode="route" :query="$route.query"></TabMenu>
       <transition name="el-fade-in">
         <router-view></router-view>
       </transition>

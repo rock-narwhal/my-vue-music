@@ -16,8 +16,8 @@ export default {
   },
   computed: {},
   methods: {
-    clickItem() {
-      this.$emit('clickItem', this.dataItem.id)
+    clickItem(id) {
+      this.$emit('clickItem', id)
     },
     getCoverImg(item) {
       let url = ''
@@ -41,7 +41,7 @@ export default {
 <template>
   <ul>
     <li v-for="item in list" :key="item.id">
-      <div @click="clickItem" class="clearfix container">
+      <div @click="clickItem(item.id)" class="clearfix container">
         <div class="img-wrap float-item" :style="{'width': `${coverWidth}%`}">
           <img v-lazy="getCoverImg(item)" alt="">
           {{ item.name }}

@@ -40,6 +40,10 @@ export default {
       this.pageInfo.total = res.result.artistCount
       this.isLoading = false
     },
+    //跳转到歌手详情
+    toArtistDetail(id){
+      this.$router.push(`/detail/artist?id=${id}`)
+    }
   }
 }
 </script>
@@ -48,7 +52,7 @@ export default {
   <div>
     <!--  搜索 单曲页面  {{$route.query}}-->
     <el-skeleton :rows="10" animated v-show="isLoading"></el-skeleton>
-    <SearchListItem :list="list" mode="ar"></SearchListItem>
+    <SearchListItem :list="list" mode="ar" @clickItem="toArtistDetail"></SearchListItem>
   </div>
 </template>
 
