@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <tab-menu :menuList="routeList" mode="route"></tab-menu>
+      <tab-menu :menuList="routeList" mode="route" style="margin: 0 30px"></tab-menu>
     </div>
     <div>
       <transition name="el-fade-in">

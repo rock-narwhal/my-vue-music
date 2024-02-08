@@ -43,12 +43,13 @@ export default {
 .menu-wrap{
   width: 100%;
   height: 60px;
-  padding: 0 30px;
   display: flex;
   align-items: center;
   .menu-item{
     margin-right: 20px;
     font-size: 16px;
+    height: 21px;
+    line-height: 21px;
     .bot-bar{
       width: 100%;
       height: 4px;
