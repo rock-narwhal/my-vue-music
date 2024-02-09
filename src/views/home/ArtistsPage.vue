@@ -74,7 +74,7 @@ export default {
 }
 </script>
 <style scoped lang="less">
-.container {
-  padding: 0 10%;
-}
+//.container {
+//  padding: 0 10%;
+//}
 </style>

@@ -52,7 +52,7 @@ export default {
       </div>
     </div>
   </div>
-  <TabMenu style="margin: 0 30px" :menu-list="routes" mode="route"></TabMenu>
+  <TabMenu style="margin: 0 30px" :menu-list="routes" mode="route" :query="$route.query"></TabMenu>
   <router-view></router-view>
 </div>
 </template>
