@@ -10,6 +10,10 @@ export default {
     className:{
       type:String,
       default:'',
+    },
+    color:{
+      type: String,
+      default: 'currentColor'
     }
   },
   computed:{
@@ -28,7 +32,7 @@ export default {
 </script>
 
 <template>
-  <svg :class="svgClass" aria-hidden="true">
+  <svg :class="svgClass" :style="{fill: color}" aria-hidden="true">
     <use :xlink:href="iconName"></use>
   </svg>
 </template>
@@ -38,7 +42,7 @@ export default {
   width: 1em;
   height: 1em;
   vertical-align: -0.15em;
-  fill: currentColor;
+  //fill: currentColor;
   overflow: hidden;
 }
 </style>

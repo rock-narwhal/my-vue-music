@@ -6,3 +6,5 @@ export const queryArtist = ({type,area,initial,limit,offset})=> get('/artist/lis
 export const artistDetail = (id) => get('/artist/detail', {id})
 // 歌手专辑
 export const artistAlbum = ({id, offset, limit}) => get('/artist/album', {id, offset, limit})
+// 歌手MV
+export const artistMV = ({id, offset, limit}) => get('/artist/mv', {id, offset, limit})

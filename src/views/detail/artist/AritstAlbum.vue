@@ -16,10 +16,8 @@ export default {
         offset: 0,
         limit: 30
       },
-      pageInfo: {
-        hasMore: false,
-        isLoading: false
-      }
+      hasMore: false,
+      isLoading: false
     }
   },
   created() {
@@ -31,19 +29,22 @@ export default {
   },
   methods: {
     async getArtistAlbum() {
-      this.pageInfo.isLoading = true
+      this.isLoading = true
       const res = await artistAlbum(this.queryInfo)
-      if (res.code !== 200) return
+      if (res.code !== 200) {
+        this.isLoading = false
+        return
+      }
       this.albums.push(...res.hotAlbums)
-      this.pageInfo.hasMore = res.more
-      this.pageInfo.isLoading = false
+      this.hasMore = res.more
+      this.isLoading = false
     },
     loadMore() {
-      if (!this.pageInfo.hasMore) return
+      if (!this.hasMore) return
       this.queryInfo.offset = this.albums.length
       this.getArtistAlbum()
     },
-    dateFormat(timestamp){
+    dateFormat(timestamp) {
       return format(timestamp)
     }
   }
@@ -53,23 +54,24 @@ export default {
 <template>
   <ImgWidthList :list="albums"
                 mode="al"
-                :has-more="pageInfo.hasMore"
+                :has-more="hasMore"
                 :infinite="true"
-                :is-loading="pageInfo.isLoading"
+                :is-loading="isLoading"
                 @loadMore="loadMore">
     <template v-slot="{scope}">
-      <div class="song-count">{{scope.size}}首</div>
-      <div class="publish-date">发行时间: {{dateFormat(scope.publishTime)}}</div>
+      <div class="song-count">{{ scope.size }}首</div>
+      <div class="publish-date">发行时间: {{ dateFormat(scope.publishTime) }}</div>
     </template>
   </ImgWidthList>
 </template>
 
 <style scoped lang="less">
-.song-count{
+.song-count {
   float: left;
   width: 60%;
 }
-.publish-date{
+
+.publish-date {
   float: left;
 }
 </style>
