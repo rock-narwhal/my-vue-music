@@ -30,7 +30,6 @@ export default {
 
 <style scoped lang="less">
 .container {
-  padding: 0 15%;
   .top-btn-wrap {
     width: 100%;
     .btn-outer{

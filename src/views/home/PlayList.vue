@@ -172,8 +172,6 @@ export default {
 </script>
 <style scoped lang="less">
 .container {
-  padding: 0 100px;
-
   .banner {
     background-color: rgba(0, 0, 0, 0);
     height: 200px;

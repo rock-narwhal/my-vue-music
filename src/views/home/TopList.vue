@@ -79,7 +79,6 @@ export default {
 </script>
 <style scoped lang="less">
 .container{
-  padding: 0 200px;
   .list-title{
     margin: 20px 0;
     font-size: 20px;

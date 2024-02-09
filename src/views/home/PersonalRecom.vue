@@ -129,8 +129,6 @@ export default {
 
 <style scoped lang="less">
 .container {
-  padding: 0 100px;
-
   .swiper-img {
     border-radius: 10px;
   }
@@ -141,15 +139,4 @@ export default {
     }
   }
 }
-
-//.el-carousel__indicator--horizontal .el-carousel__button{
-//  height: 4px;
-//  width: 4px;
-//  background-color: #dbd5d5;
-//  border-radius: 50%;
-//}
-//
-//.el-carousel__indicator--horizontal .active .el-carousel__button{
-//  background-color: #ec4141;
-//}
 </style>
