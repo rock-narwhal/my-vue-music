@@ -40,6 +40,9 @@ export default {
     convert(milli) {
       return timeConvert(milli / 1000)
     },
+    playMusic(song){
+
+    }
   }
 }
 </script>
@@ -52,7 +55,8 @@ export default {
         :data="songList"
         stripe
         style="width: 100%"
-        v-show="!isLoading">
+        v-show="!isLoading"
+        @cell-click="playMusic">
       <el-table-column
           type="index"
           width="60">

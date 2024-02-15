@@ -87,9 +87,11 @@ export default {
   data() {
     return {
       hiddenCover: false, //封面和按钮切换
-      // 播放模式  循环播放，单曲循环，随机播放，列表循环
+      // 播放模式  0循环播放，1单曲循环，2随机播放，3列表循环
+      playMode: 0, //播放模式
       playModeIcons: ['icon-xunhuanbofang', 'icon-danquxunhuan1', 'icon-suijibofang1', 'icon-liebiaoshunxu'],
       progress: 0, // 播放进度  0 - 100
+      
     }
   },
   computed: {
@@ -204,6 +206,7 @@ export default {
     position: absolute;
     top: -80px;
     width: 100%;
+    transition: 0.5s;
 
     .left-btn {
       height: 50%;

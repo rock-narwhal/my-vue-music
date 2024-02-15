@@ -29,6 +29,7 @@ const state = {
             id:'0',
             name:'未知歌手'
         }], //歌手/乐队
+        playingSong:{}// 正在播放的音乐
     },
     // 播放列表信息
     playList:[]
