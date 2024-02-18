@@ -46,6 +46,9 @@ export default {
     },
     dateFormat(timestamp) {
       return format(timestamp)
+    },
+    toAlbumDetail(id){
+      this.$router.push(`/detail/album?id=${id}`)
     }
   }
 }
@@ -57,7 +60,8 @@ export default {
                 :has-more="hasMore"
                 :infinite="true"
                 :is-loading="isLoading"
-                @loadMore="loadMore">
+                @loadMore="loadMore"
+                @clickItem="toAlbumDetail">
     <template v-slot="{scope}">
       <div class="song-count">{{ scope.size }}首</div>
       <div class="publish-date">发行时间: {{ dateFormat(scope.publishTime) }}</div>
