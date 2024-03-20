@@ -1,0 +1,45 @@
+<script>
+import {timeConvert} from "@/util/dateUtil";
+
+export default {
+  name: "MusicList",
+  props: {
+    titles: {
+      type: Array,
+      require: true
+    },
+    dataList: {
+      type: Array,
+      require: true
+    }
+  },
+  methods:{
+    convert(milli) {
+      return timeConvert(milli / 1000)
+    },
+  }
+}
+</script>
+
+<template>
+  <div class="music-list-wrapper">
+    <ul class="title-bar flex-box">
+      <li v-for="item in titles" :key="item.val" :style="{width:item.width}">
+        {{item.val}}
+      </li>
+    </ul>
+    <ul class="music-list flex-box" v-for="(item,index) in dataList" :key="item.id">
+      <li :style="{width:titles[0].width}">{{index + " 爱心"}}</li>
+      <li :style="{width:titles[1].width}">{{item.name}}</li>
+      <li :style="{width:titles[2].width}">{{item.ar[0].name}}</li>
+      <li :style="{width:titles[3].width}">{{item.al.name}}</li>
+      <li :style="{width:titles[4].width}">{{ convert(item.dt) }}</li>
+    </ul>
+  </div>
+</template>
+
+<style scoped lang="less">
+.flex-box{
+  display: flex;
+}
+</style>
