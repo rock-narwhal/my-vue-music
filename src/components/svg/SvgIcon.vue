@@ -13,7 +13,11 @@ export default {
     },
     color:{
       type: String,
-      default: 'currentColor'
+      default: '#333'
+    },
+    fillColor:{
+      type: String,
+      default: 'none'
     }
   },
   computed:{
@@ -32,7 +36,7 @@ export default {
 </script>
 
 <template>
-  <svg :class="svgClass" :style="{fill: color}" aria-hidden="true">
+  <svg :class="svgClass" :style="{fill: fillColor,stroke: color}" aria-hidden="true">
     <use :xlink:href="iconName"></use>
   </svg>
 </template>

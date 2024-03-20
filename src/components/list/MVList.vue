@@ -51,7 +51,7 @@ export default {
         class="pointer">
       <img v-lazy="item.imgurl16v9" alt="">
       <button class="play-count">
-        <svg-icon icon-class="play-one" color="white"></svg-icon>
+        <svg-icon icon-class="play-fill" fill-color="white" color="white"></svg-icon>
         {{ convert(item.playCount) }}
       </button>
       <button class="duration">{{ format(item.duration) }}</button>

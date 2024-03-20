@@ -61,7 +61,7 @@ export default {
         <div class="button-group">
 <!--          按钮-->
           <button v-show="checkVip" style="background-color: #ec4141; color: white">
-            <svg-icon color="#fff" icon-class="play-fill"></svg-icon> 开通VIP畅听专辑
+            <svg-icon color="#fff" fillColor="#fff" icon-class="play-fill"></svg-icon> 开通VIP畅听专辑
           </button>
           <button v-show="!this.albumInfo.isSub">
             <svg-icon icon-class="collection-records"></svg-icon> 收藏({{this.albumInfo.subCount}})
