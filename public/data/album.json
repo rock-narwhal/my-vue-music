@@ -1,0 +1,271 @@
+{
+  "resourceState": true,
+  "songs": [
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 43608,
+          "name": "Steve Aoki"
+        },
+        {
+          "id": 3684,
+          "name": "林俊杰",
+          "alia": [
+            "JJ Lin",
+            "Wayne Lim"
+          ]
+        },
+        {
+          "id": 1039527,
+          "name": "Lucas & Steve"
+        }
+      ],
+      "al": {
+        "id": 182099803,
+        "name": "The Show (Steve Aoki & Lucas & Steve Remix)",
+        "pic_str": "109951169219663310",
+        "pic": 109951169219663310
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "alia": [],
+      "pop": 95,
+      "rt": "",
+      "mst": 9,
+      "cp": 2706458,
+      "crbt": null,
+      "cf": "",
+      "dt": 168774,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 6753219,
+        "vd": -73707,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 1786027,
+        "fid": 0,
+        "size": 37679534,
+        "vd": -73653,
+        "sr": 44100
+      },
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 2701314,
+        "vd": -70505,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "djId": 0,
+      "no": 1,
+      "fee": 8,
+      "mv": 14689187,
+      "t": 0,
+      "v": 7,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 4051949,
+        "vd": -71362,
+        "sr": 44100
+      },
+      "name": "The Show (Steve Aoki & Lucas & Steve Remix)",
+      "id": 2112776910,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14689187",
+          "type": 0,
+          "title": "The Show (Steve Aoki & Lucas & Steve Remix)",
+          "playTime": 76658,
+          "coverUrl": "https://p2.music.126.net/cEIxnGlEQG4rSkwjvFtguA==/109951169251303332.jpg",
+          "publishTime": 1704988800007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2112776910,
+        "fee": 8,
+        "payed": 0,
+        "st": 0,
+        "pl": 320000,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 320000,
+        "toast": false,
+        "flag": 2064388,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "exhigh",
+        "dlLevel": "none",
+        "flLevel": "exhigh",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": null,
+          "cannotListenReason": null,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 0
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 0
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 0
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    }
+  ],
+  "code": 200,
+  "album": {
+    "songs": [],
+    "paid": false,
+    "onSale": false,
+    "mark": 8192,
+    "awardTags": null,
+    "copyrightId": 2706458,
+    "blurPicUrl": "https://p2.music.126.net/oizUxZtLMauHAPu9n-GoRA==/109951169219663310.jpg",
+    "companyId": 0,
+    "pic": 109951169219663310,
+    "artists": [
+      {
+        "img1v1Id": 18686200114669624,
+        "topicPerson": 0,
+        "trans": "",
+        "picId": 0,
+        "musicSize": 0,
+        "albumSize": 0,
+        "briefDesc": "",
+        "picUrl": "",
+        "img1v1Url": "https://p2.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
+        "followed": false,
+        "alias": [],
+        "name": "Steve Aoki",
+        "id": 43608,
+        "img1v1Id_str": "18686200114669622"
+      },
+      {
+        "img1v1Id": 18686200114669624,
+        "topicPerson": 0,
+        "trans": "",
+        "picId": 0,
+        "musicSize": 0,
+        "albumSize": 0,
+        "briefDesc": "",
+        "picUrl": "",
+        "img1v1Url": "https://p2.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
+        "followed": false,
+        "alias": [],
+        "name": "林俊杰",
+        "id": 3684,
+        "img1v1Id_str": "18686200114669622"
+      }
+    ],
+    "picId": 109951169219663310,
+    "artist": {
+      "img1v1Id": 109951169339149890,
+      "topicPerson": 0,
+      "trans": "",
+      "picId": 18760966904847404,
+      "musicSize": 1307,
+      "albumSize": 256,
+      "briefDesc": "",
+      "picUrl": "https://p2.music.126.net/Qb8svTMe4EyFVFliwURQRw==/18760966904847404.jpg",
+      "img1v1Url": "https://p2.music.126.net/lFpt1ySw0vBUVc_meUcqsg==/109951169339149891.jpg",
+      "followed": false,
+      "alias": [],
+      "name": "Steve Aoki",
+      "id": 43608,
+      "picId_str": "18760966904847404",
+      "img1v1Id_str": "109951169339149891"
+    },
+    "briefDesc": null,
+    "publishTime": 1704988800000,
+    "company": "FLUX GEN",
+    "picUrl": "https://p2.music.126.net/oizUxZtLMauHAPu9n-GoRA==/109951169219663310.jpg",
+    "commentThreadId": "R_AL_3_182099803",
+    "alias": [],
+    "status": 1,
+    "subType": "Remix",
+    "description": "2023年，Steve Aoki与88rising联合打造的音乐厂牌FLUX GEN，发行了与林俊杰合作的首张单曲“The Show”，如今，全新remix版本“The Show (Steve Aoki & Lucas & Steve Remix)”再度释出。Steve Aoki曾两次获得格莱美奖提名，全平台每月粉丝量超6500万，仅Spotify每月就有1540万听众。他在Spotify上的播放量超过50亿次，曾与BTS、Maluma、Lil Uzi Vert、Blink 182、Migos、J Balvin和Machine Gun Kelly等众多艺人合作。林俊杰则是一位创作能力极其出色的音乐人，20年辉煌的职业生涯中，他在亚洲的知名度飙升。该混音版本的制作团队Lucas & Steve在Spotify每月拥有超300万听众，流媒体收听人数超过140万。三组艺术家合力呈现“The Show (Steve Aoki & Lucas & Steve Remix)”，官方歌词视频也将随歌曲上架，敬请欣赏。",
+    "tags": "",
+    "name": "The Show (Steve Aoki & Lucas & Steve Remix)",
+    "id": 182099803,
+    "type": "专辑",
+    "size": 1,
+    "picId_str": "109951169219663310",
+    "info": {
+      "commentThread": {
+        "id": "R_AL_3_182099803",
+        "resourceInfo": {
+          "id": 182099803,
+          "userId": -1,
+          "name": "The Show (Steve Aoki & Lucas & Steve Remix)",
+          "imgUrl": "http://p3.music.126.net/oizUxZtLMauHAPu9n-GoRA==/109951169219663310.jpg",
+          "creator": null,
+          "encodedId": null,
+          "subTitle": null,
+          "webUrl": null
+        },
+        "resourceType": 3,
+        "commentCount": 105,
+        "likedCount": 0,
+        "shareCount": 61,
+        "hotCount": 0,
+        "latestLikedUsers": null,
+        "resourceId": 182099803,
+        "resourceOwnerId": -1,
+        "resourceTitle": "The Show (Steve Aoki & Lucas & Steve Remix)"
+      },
+      "latestLikedUsers": null,
+      "liked": false,
+      "comments": null,
+      "resourceType": 3,
+      "resourceId": 182099803,
+      "commentCount": 105,
+      "likedCount": 0,
+      "shareCount": 61,
+      "threadId": "R_AL_3_182099803"
+    }
+  }
+}

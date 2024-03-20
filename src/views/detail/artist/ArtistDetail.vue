@@ -37,7 +37,7 @@ export default {
 <template>
 <div class="artist-detail">
   <div class="banner">
-    <img v-lazy="artist.avatar" v-show="artist.id" alt="">
+    <img v-lazy="artist.avatar" v-show="artist.avatar" alt="">
     <div class="artist-info">
       <div class="font-24" style="font-weight: bold">{{artist.name}}</div>
       <div>{{artist.transNames && artist.transNames[0]}}</div>
