@@ -5,27 +5,18 @@
       "rtUrls": [],
       "ar": [
         {
-          "id": 43608,
-          "name": "Steve Aoki"
-        },
-        {
-          "id": 3684,
-          "name": "林俊杰",
-          "alia": [
-            "JJ Lin",
-            "Wayne Lim"
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
           ]
-        },
-        {
-          "id": 1039527,
-          "name": "Lucas & Steve"
         }
       ],
       "al": {
-        "id": 182099803,
-        "name": "The Show (Steve Aoki & Lucas & Steve Remix)",
-        "pic_str": "109951169219663310",
-        "pic": 109951169219663310
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
       },
       "st": 1,
       "noCopyrightRcmd": null,
@@ -33,97 +24,97 @@
       "rtype": 0,
       "rurl": null,
       "pst": 0,
-      "alia": [],
-      "pop": 95,
-      "rt": "",
-      "mst": 9,
-      "cp": 2706458,
-      "crbt": null,
-      "cf": "",
-      "dt": 168774,
-      "h": {
-        "br": 320000,
-        "fid": 0,
-        "size": 6753219,
-        "vd": -73707,
-        "sr": 44100
-      },
-      "sq": {
-        "br": 1786027,
-        "fid": 0,
-        "size": 37679534,
-        "vd": -73653,
-        "sr": 44100
-      },
       "hr": null,
       "l": {
         "br": 128000,
         "fid": 0,
-        "size": 2701314,
-        "vd": -70505,
+        "size": 3402649,
+        "vd": -58292,
         "sr": 44100
       },
       "rtUrl": null,
       "ftype": 0,
-      "djId": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 212600,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 8506558,
+        "vd": -62395,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 1016460,
+        "fid": 0,
+        "size": 27012432,
+        "vd": -62550,
+        "sr": 44100
+      },
       "no": 1,
-      "fee": 8,
-      "mv": 14689187,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14671665,
       "t": 0,
-      "v": 7,
+      "v": 14,
       "cd": "01",
       "a": null,
       "m": {
         "br": 192000,
         "fid": 0,
-        "size": 4051949,
-        "vd": -71362,
+        "size": 5103952,
+        "vd": -59850,
         "sr": 44100
       },
-      "name": "The Show (Steve Aoki & Lucas & Steve Remix)",
-      "id": 2112776910,
+      "name": "Welcome To New York (Taylor's Version)",
+      "id": 2092283064,
       "videoInfo": {
         "moreThanOne": false,
         "video": {
-          "vid": "14689187",
+          "vid": "14671665",
           "type": 0,
-          "title": "The Show (Steve Aoki & Lucas & Steve Remix)",
-          "playTime": 76658,
-          "coverUrl": "https://p2.music.126.net/cEIxnGlEQG4rSkwjvFtguA==/109951169251303332.jpg",
-          "publishTime": 1704988800007,
+          "title": "Welcome To New York (Taylor's Version) (Lyric Video)",
+          "playTime": 44198,
+          "coverUrl": "https://p2.music.126.net/9sTYGtmetA9v6LsfdQ64SA==/109951169012115579.jpg",
+          "publishTime": 1698336000007,
           "artists": null
         }
       },
       "privilege": {
-        "id": 2112776910,
-        "fee": 8,
+        "id": 2092283064,
+        "fee": 1,
         "payed": 0,
         "st": 0,
-        "pl": 320000,
+        "pl": 0,
         "dl": 0,
         "sp": 7,
         "cp": 1,
         "subp": 1,
         "cs": false,
         "maxbr": 999000,
-        "fl": 320000,
+        "fl": 0,
         "toast": false,
-        "flag": 2064388,
+        "flag": 2065668,
         "preSell": false,
         "playMaxbr": 999000,
         "downloadMaxbr": 999000,
         "maxBrLevel": "sky",
         "playMaxBrLevel": "sky",
         "downloadMaxBrLevel": "sky",
-        "plLevel": "exhigh",
+        "plLevel": "none",
         "dlLevel": "none",
-        "flLevel": "exhigh",
+        "flLevel": "none",
         "rscl": null,
         "freeTrialPrivilege": {
           "resConsumable": false,
           "userConsumable": false,
-          "listenType": null,
-          "cannotListenReason": null,
+          "listenType": 5,
+          "cannotListenReason": 1,
           "playReason": null
         },
         "rightSource": 0,
@@ -132,19 +123,2911 @@
             "rate": 128000,
             "chargeUrl": null,
             "chargeMessage": null,
-            "chargeType": 0
+            "chargeType": 1
           },
           {
             "rate": 192000,
             "chargeUrl": null,
             "chargeMessage": null,
-            "chargeType": 0
+            "chargeType": 1
           },
           {
             "rate": 320000,
             "chargeUrl": null,
             "chargeMessage": null,
-            "chargeType": 0
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 3710267,
+        "vd": -47831,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 231833,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 9275603,
+        "vd": -51611,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 1032619,
+        "fid": 0,
+        "size": 29924445,
+        "vd": -51510,
+        "sr": 44100
+      },
+      "no": 2,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14672413,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 5565379,
+        "vd": -49142,
+        "sr": 44100
+      },
+      "name": "Blank Space (Taylor's Version)",
+      "id": 2092283112,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14672413",
+          "type": 0,
+          "title": "Blank Space (Taylor's Version) (Lyric Video)",
+          "playTime": 30645,
+          "coverUrl": "https://p1.music.126.net/hrqIbep0zJ97nKOjZowY7w==/109951169012111659.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092283112,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128002,
+        "fid": 0,
+        "size": 3696893,
+        "vd": -67050,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 231000,
+      "h": {
+        "br": 320002,
+        "fid": 0,
+        "size": 9242166,
+        "vd": -71103,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 982790,
+        "fid": 0,
+        "size": 28378068,
+        "vd": -71451,
+        "sr": 44100
+      },
+      "no": 3,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14671667,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192002,
+        "fid": 0,
+        "size": 5545317,
+        "vd": -68566,
+        "sr": 44100
+      },
+      "name": "Style (Taylor's Version)",
+      "id": 2092285037,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14671667",
+          "type": 0,
+          "title": "Style (Taylor's Version) (Lyric Video)",
+          "playTime": 28409,
+          "coverUrl": "https://p1.music.126.net/r2w7XYj6AdslK4uCBxFk3w==/109951169012106367.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285037,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 3773797,
+        "vd": -54420,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 95,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 235800,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 9434427,
+        "vd": -58377,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 1008382,
+        "fid": 0,
+        "size": 29722081,
+        "vd": -58450,
+        "sr": 44100
+      },
+      "no": 4,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14671666,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 5660674,
+        "vd": -55822,
+        "sr": 44100
+      },
+      "name": "Out Of The Woods (Taylor's Version)",
+      "id": 2092285038,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14671666",
+          "type": 0,
+          "title": "Out Of The Woods (Taylor's Version) (Lyric Video)",
+          "playTime": 13792,
+          "coverUrl": "https://p1.music.126.net/NbXB5mX4slWovDJWHGPyFg==/109951169012105867.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285038,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 3093777,
+        "vd": -59033,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 95,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 193289,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 7734378,
+        "vd": -63098,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 1066801,
+        "fid": 0,
+        "size": 25775135,
+        "vd": -62365,
+        "sr": 44100
+      },
+      "no": 5,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14671661,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 4640644,
+        "vd": -60617,
+        "sr": 44100
+      },
+      "name": "All You Had To Do Was Stay (Taylor's Version)",
+      "id": 2092285039,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14671661",
+          "type": 0,
+          "title": "All You Had To Do Was Stay (Taylor's Version) (Lyric Video)",
+          "playTime": 11173,
+          "coverUrl": "https://p1.music.126.net/-jON13c0EOhH3DEt9SII6A==/109951169012107043.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285039,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 3508393,
+        "vd": -53370,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 219209,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 8770917,
+        "vd": -57380,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 1032579,
+        "fid": 0,
+        "size": 28293866,
+        "vd": -57474,
+        "sr": 44100
+      },
+      "no": 6,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14672414,
+      "t": 0,
+      "v": 11,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 5262568,
+        "vd": -54823,
+        "sr": 44100
+      },
+      "name": "Shake It Off (Taylor's Version)",
+      "id": 2092285062,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14672414",
+          "type": 0,
+          "title": "Shake It Off (Taylor's Version) (Lyric Video)",
+          "playTime": 16589,
+          "coverUrl": "https://p1.music.126.net/4kSINLTuQMNWZX9M26K5wA==/109951169012105371.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285062,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2065668,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 3323655,
+        "vd": -51209,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 95,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 207650,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 8309072,
+        "vd": -55202,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 1015560,
+        "fid": 0,
+        "size": 26360179,
+        "vd": -55210,
+        "sr": 44100
+      },
+      "no": 7,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14672409,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 4985461,
+        "vd": -52682,
+        "sr": 44100
+      },
+      "name": "I Wish You Would (Taylor's Version)",
+      "id": 2092285067,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14672409",
+          "type": 0,
+          "title": "I Wish You Would (Taylor's Version) (Lyric Video)",
+          "playTime": 10552,
+          "coverUrl": "https://p1.music.126.net/A_LfZlvzEr03N8_frjxhWA==/109951169012093966.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285067,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2065668,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128002,
+        "fid": 0,
+        "size": 3378826,
+        "vd": -43786,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 211103,
+      "h": {
+        "br": 320002,
+        "fid": 0,
+        "size": 8446999,
+        "vd": -47817,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 986589,
+        "fid": 0,
+        "size": 26034071,
+        "vd": -49177,
+        "sr": 44100
+      },
+      "no": 8,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14671664,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192002,
+        "fid": 0,
+        "size": 5068217,
+        "vd": -45289,
+        "sr": 44100
+      },
+      "name": "Bad Blood (Taylor's Version)",
+      "id": 2092285075,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14671664",
+          "type": 0,
+          "title": "Bad Blood (Taylor's Version) (Lyric Video)",
+          "playTime": 12795,
+          "coverUrl": "https://p1.music.126.net/aC5vMJxBnOrFQ5uSzN-gkQ==/109951169012113620.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285075,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 3528037,
+        "vd": -38711,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 220433,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 8820027,
+        "vd": -42920,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 914127,
+        "fid": 0,
+        "size": 25188009,
+        "vd": -42982,
+        "sr": 44100
+      },
+      "no": 9,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14672411,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 5292034,
+        "vd": -40331,
+        "sr": 44100
+      },
+      "name": "Wildest Dreams (Taylor's Version)",
+      "id": 2092285077,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14672411",
+          "type": 0,
+          "title": "Wildest Dreams (Taylor's Version) (Lyric Video)",
+          "playTime": 38792,
+          "coverUrl": "https://p1.music.126.net/fxRk6ONf4mOeDvYA3IkPZg==/109951169012109235.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285077,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2065668,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 3961461,
+        "vd": -54997,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 95,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 247533,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 9903587,
+        "vd": -58871,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 1036017,
+        "fid": 0,
+        "size": 32056110,
+        "vd": -59265,
+        "sr": 44100
+      },
+      "no": 10,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14671659,
+      "t": 0,
+      "v": 15,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 5942169,
+        "vd": -56417,
+        "sr": 44100
+      },
+      "name": "How You Get The Girl (Taylor's Version)",
+      "id": 2092285101,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14671659",
+          "type": 0,
+          "title": "How You Get The Girl (Taylor's Version) (Lyric Video)",
+          "playTime": 8746,
+          "coverUrl": "https://p1.music.126.net/OhPo4A1cgaXzwYi_4_rM2A==/109951169012105104.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285101,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128001,
+        "fid": 0,
+        "size": 4002839,
+        "vd": -44591,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 95,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 250100,
+      "h": {
+        "br": 320001,
+        "fid": 0,
+        "size": 10007031,
+        "vd": -48550,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 973905,
+        "fid": 0,
+        "size": 30446726,
+        "vd": -48532,
+        "sr": 44100
+      },
+      "no": 11,
+      "fee": 1,
+      "djId": 0,
+      "mv": 0,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192001,
+        "fid": 0,
+        "size": 6004236,
+        "vd": -46007,
+        "sr": 44100
+      },
+      "name": "This Love (Taylor's Version)",
+      "id": 2092283217,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": null
+      },
+      "privilege": {
+        "id": 2092283217,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2065668,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 3132230,
+        "vd": -55264,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 95,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 195700,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 7830509,
+        "vd": -59298,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 1024806,
+        "fid": 0,
+        "size": 25069329,
+        "vd": -59757,
+        "sr": 44100
+      },
+      "no": 12,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14671660,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 4698323,
+        "vd": -56756,
+        "sr": 44100
+      },
+      "name": "I Know Places (Taylor's Version)",
+      "id": 2092283224,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14671660",
+          "type": 0,
+          "title": "I Know Places (Taylor's Version) (Lyric Video)",
+          "playTime": 9814,
+          "coverUrl": "https://p1.music.126.net/m5_YXVKXoc4ppkqdrAxFLg==/109951169012103679.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092283224,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128001,
+        "fid": 0,
+        "size": 4337206,
+        "vd": -35898,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 271000,
+      "h": {
+        "br": 320001,
+        "fid": 0,
+        "size": 10842950,
+        "vd": -40281,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 837481,
+        "fid": 0,
+        "size": 28369681,
+        "vd": -40364,
+        "sr": 44100
+      },
+      "no": 13,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14672410,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192001,
+        "fid": 0,
+        "size": 6505787,
+        "vd": -37647,
+        "sr": 44100
+      },
+      "name": "Clean (Taylor's Version)",
+      "id": 2092283230,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14672410",
+          "type": 0,
+          "title": "Clean (Taylor's Version) (Lyric Video)",
+          "playTime": 28515,
+          "coverUrl": "https://p1.music.126.net/UqF5GMqSX5Pt83jvqVNgxg==/109951169012105354.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092283230,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 3930114,
+        "vd": -50492,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 95,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 245566,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 9825219,
+        "vd": -54379,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 997528,
+        "fid": 0,
+        "size": 30619983,
+        "vd": -55138,
+        "sr": 44100
+      },
+      "no": 14,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14671668,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 5895149,
+        "vd": -51882,
+        "sr": 44100
+      },
+      "name": "Wonderland (Taylor's Version)",
+      "id": 2092283303,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14671668",
+          "type": 0,
+          "title": "Wonderland (Taylor's Version) (Lyric Video)",
+          "playTime": 21271,
+          "coverUrl": "https://p1.music.126.net/Zl50PBTwn2gzzf0bGCigMg==/109951169012115099.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092283303,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2065668,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 4279110,
+        "vd": -20543,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 95,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 267389,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 10697709,
+        "vd": -24759,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 852184,
+        "fid": 0,
+        "size": 28483096,
+        "vd": -24350,
+        "sr": 44100
+      },
+      "no": 15,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14672415,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 6418643,
+        "vd": -22167,
+        "sr": 44100
+      },
+      "name": "You Are In Love (Taylor's Version)",
+      "id": 2092283322,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14672415",
+          "type": 0,
+          "title": "You Are In Love (Taylor's Version) (Lyric Video)",
+          "playTime": 10858,
+          "coverUrl": "https://p1.music.126.net/I3MxsynquIH1XrhSAUm1EQ==/109951169012108766.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092283322,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 3683936,
+        "vd": -56697,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 230177,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 9209774,
+        "vd": -60391,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 1038006,
+        "fid": 0,
+        "size": 29865738,
+        "vd": -60172,
+        "sr": 44100
+      },
+      "no": 16,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14672412,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 5525882,
+        "vd": -57932,
+        "sr": 44100
+      },
+      "name": "New Romantics (Taylor's Version)",
+      "id": 2092285247,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14672412",
+          "type": 0,
+          "title": "New Romantics (Taylor's Version) (Lyric Video)",
+          "playTime": 9503,
+          "coverUrl": "https://p1.music.126.net/-WfJnTMm7W_hrPUKUTBsLQ==/109951169012109254.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285247,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 2887306,
+        "vd": -10666,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 180381,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 7218199,
+        "vd": -15007,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 846014,
+        "fid": 0,
+        "size": 19075650,
+        "vd": -15062,
+        "sr": 44100
+      },
+      "no": 17,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14671662,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 4330937,
+        "vd": -12380,
+        "sr": 44100
+      },
+      "name": "\"Slut!\" (Taylor's Version) (From The Vault)",
+      "id": 2092285259,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14671662",
+          "type": 0,
+          "title": "\"Slut!\" (Taylor's Version) (From The Vault) (Lyric Video)",
+          "playTime": 67846,
+          "coverUrl": "https://p1.music.126.net/Rz1bS67IMpzpCuQz1QvaNw==/109951169012104626.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285259,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2065668,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 4478476,
+        "vd": -41086,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 279833,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 11196125,
+        "vd": -45335,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 903467,
+        "fid": 0,
+        "size": 31602557,
+        "vd": -45275,
+        "sr": 44100
+      },
+      "no": 18,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14672407,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 6717693,
+        "vd": -42746,
+        "sr": 44100
+      },
+      "name": "Say Don't Go (Taylor's Version) (From The Vault)",
+      "id": 2092285270,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14672407",
+          "type": 0,
+          "title": "Say Don't Go (Taylor's Version) (From The Vault) (Lyric Video)",
+          "playTime": 17191,
+          "coverUrl": "https://p1.music.126.net/WVfRfmUS0f0SiMbWc0qUVA==/109951169012100811.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285270,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2065668,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 2343959,
+        "vd": -37379,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 146436,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 5859831,
+        "vd": -41648,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 861188,
+        "fid": 0,
+        "size": 15763718,
+        "vd": -41778,
+        "sr": 44100
+      },
+      "no": 19,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14671663,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 3515916,
+        "vd": -39051,
+        "sr": 44100
+      },
+      "name": "Now That We Don't Talk (Taylor's Version) (From The Vault)",
+      "id": 2092285302,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14671663",
+          "type": 0,
+          "title": "Now That We Don't Talk (Taylor's Version) (From The Vault) (Lyric Video)",
+          "playTime": 25819,
+          "coverUrl": "https://p1.music.126.net/yGATN6B8zcLZ7eDJYBfESQ==/109951169012108020.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285302,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 2750215,
+        "vd": -39116,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 95,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 171818,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 6875472,
+        "vd": -43393,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 909656,
+        "fid": 0,
+        "size": 19537034,
+        "vd": -43325,
+        "sr": 44100
+      },
+      "no": 20,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14672408,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 4125301,
+        "vd": -40791,
+        "sr": 44100
+      },
+      "name": "Suburban Legends (Taylor's Version) (From The Vault)",
+      "id": 2092285325,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14672408",
+          "type": 0,
+          "title": "Suburban Legends (Taylor's Version) (From The Vault) (Lyric Video)",
+          "playTime": 8709,
+          "coverUrl": "https://p1.music.126.net/mAY1P8luagltS-6tsHwNAg==/109951169012107526.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285325,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2065668,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 999000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          }
+        ]
+      }
+    },
+    {
+      "rtUrls": [],
+      "ar": [
+        {
+          "id": 44266,
+          "name": "Taylor Swift",
+          "tns": [
+            "泰勒·斯威夫特"
+          ]
+        }
+      ],
+      "al": {
+        "id": 177237088,
+        "name": "1989 (Taylor's Version)",
+        "pic_str": "109951169026162735",
+        "pic": 109951169026162740
+      },
+      "st": 1,
+      "noCopyrightRcmd": null,
+      "songJumpInfo": null,
+      "rtype": 0,
+      "rurl": null,
+      "pst": 0,
+      "hr": null,
+      "l": {
+        "br": 128000,
+        "fid": 0,
+        "size": 3672651,
+        "vd": -46773,
+        "sr": 44100
+      },
+      "rtUrl": null,
+      "ftype": 0,
+      "alia": [],
+      "pop": 100,
+      "rt": "",
+      "mst": 9,
+      "cp": 7003,
+      "crbt": null,
+      "cf": "",
+      "dt": 229477,
+      "h": {
+        "br": 320000,
+        "fid": 0,
+        "size": 9181562,
+        "vd": -50918,
+        "sr": 44100
+      },
+      "sq": {
+        "br": 937094,
+        "fid": 0,
+        "size": 26880257,
+        "vd": -51012,
+        "sr": 44100
+      },
+      "no": 21,
+      "fee": 1,
+      "djId": 0,
+      "mv": 14672406,
+      "t": 0,
+      "v": 13,
+      "cd": "01",
+      "a": null,
+      "m": {
+        "br": 192000,
+        "fid": 0,
+        "size": 5508955,
+        "vd": -48344,
+        "sr": 44100
+      },
+      "name": "Is It Over Now? (Taylor's Version) (From The Vault)",
+      "id": 2092285359,
+      "videoInfo": {
+        "moreThanOne": false,
+        "video": {
+          "vid": "14672406",
+          "type": 0,
+          "title": "Is It Over Now? (Taylor's Version) (From The Vault) (Lyric Video)",
+          "playTime": 23414,
+          "coverUrl": "https://p1.music.126.net/wZinJ9JraT7iiCW9I2VmWQ==/109951169012104618.jpg",
+          "publishTime": 1698336000007,
+          "artists": null
+        }
+      },
+      "privilege": {
+        "id": 2092285359,
+        "fee": 1,
+        "payed": 0,
+        "st": 0,
+        "pl": 0,
+        "dl": 0,
+        "sp": 7,
+        "cp": 1,
+        "subp": 1,
+        "cs": false,
+        "maxbr": 999000,
+        "fl": 0,
+        "toast": false,
+        "flag": 2000132,
+        "preSell": false,
+        "playMaxbr": 999000,
+        "downloadMaxbr": 999000,
+        "maxBrLevel": "sky",
+        "playMaxBrLevel": "sky",
+        "downloadMaxBrLevel": "sky",
+        "plLevel": "none",
+        "dlLevel": "none",
+        "flLevel": "none",
+        "rscl": null,
+        "freeTrialPrivilege": {
+          "resConsumable": false,
+          "userConsumable": false,
+          "listenType": 5,
+          "cannotListenReason": 1,
+          "playReason": null
+        },
+        "rightSource": 0,
+        "chargeInfoList": [
+          {
+            "rate": 128000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 192000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
+          },
+          {
+            "rate": 320000,
+            "chargeUrl": null,
+            "chargeMessage": null,
+            "chargeType": 1
           },
           {
             "rate": 999000,
@@ -163,109 +3046,96 @@
     "onSale": false,
     "mark": 8192,
     "awardTags": null,
-    "copyrightId": 2706458,
-    "blurPicUrl": "https://p2.music.126.net/oizUxZtLMauHAPu9n-GoRA==/109951169219663310.jpg",
+    "blurPicUrl": "https://p2.music.126.net/PA01TRYxcT28W_3B_SoPKw==/109951169026162735.jpg",
     "companyId": 0,
-    "pic": 109951169219663310,
+    "pic": 109951169026162740,
     "artists": [
       {
         "img1v1Id": 18686200114669624,
         "topicPerson": 0,
         "trans": "",
         "picId": 0,
+        "briefDesc": "",
         "musicSize": 0,
         "albumSize": 0,
-        "briefDesc": "",
         "picUrl": "",
         "img1v1Url": "https://p2.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
         "followed": false,
         "alias": [],
-        "name": "Steve Aoki",
-        "id": 43608,
-        "img1v1Id_str": "18686200114669622"
-      },
-      {
-        "img1v1Id": 18686200114669624,
-        "topicPerson": 0,
-        "trans": "",
-        "picId": 0,
-        "musicSize": 0,
-        "albumSize": 0,
-        "briefDesc": "",
-        "picUrl": "",
-        "img1v1Url": "https://p2.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
-        "followed": false,
-        "alias": [],
-        "name": "林俊杰",
-        "id": 3684,
+        "name": "Taylor Swift",
+        "id": 44266,
         "img1v1Id_str": "18686200114669622"
       }
     ],
-    "picId": 109951169219663310,
+    "picId": 109951169026162740,
     "artist": {
-      "img1v1Id": 109951169339149890,
+      "img1v1Id": 109951169384495890,
       "topicPerson": 0,
-      "trans": "",
-      "picId": 18760966904847404,
-      "musicSize": 1307,
-      "albumSize": 256,
+      "trans": "泰勒·斯威夫特",
+      "picId": 109951167881974530,
       "briefDesc": "",
-      "picUrl": "https://p2.music.126.net/Qb8svTMe4EyFVFliwURQRw==/18760966904847404.jpg",
-      "img1v1Url": "https://p2.music.126.net/lFpt1ySw0vBUVc_meUcqsg==/109951169339149891.jpg",
+      "musicSize": 2286,
+      "albumSize": 165,
+      "picUrl": "https://p2.music.126.net/J9vY1-_n5msBf8nyCKdL_w==/109951167881974520.jpg",
+      "img1v1Url": "https://p2.music.126.net/2dDosoML_YMFbJ8MLCKhyQ==/109951169384495891.jpg",
       "followed": false,
       "alias": [],
-      "name": "Steve Aoki",
-      "id": 43608,
-      "picId_str": "18760966904847404",
-      "img1v1Id_str": "109951169339149891"
+      "name": "Taylor Swift",
+      "id": 44266,
+      "picId_str": "109951167881974520",
+      "transNames": [
+        "泰勒·斯威夫特"
+      ],
+      "img1v1Id_str": "109951169384495891"
     },
-    "briefDesc": null,
-    "publishTime": 1704988800000,
-    "company": "FLUX GEN",
-    "picUrl": "https://p2.music.126.net/oizUxZtLMauHAPu9n-GoRA==/109951169219663310.jpg",
-    "commentThreadId": "R_AL_3_182099803",
-    "alias": [],
+    "copyrightId": 7003,
+    "publishTime": 1698336000000,
+    "company": "Taylor Swift",
+    "briefDesc": "",
+    "picUrl": "https://p2.music.126.net/PA01TRYxcT28W_3B_SoPKw==/109951169026162735.jpg",
+    "commentThreadId": "R_AL_3_177237088",
     "status": 1,
-    "subType": "Remix",
-    "description": "2023年，Steve Aoki与88rising联合打造的音乐厂牌FLUX GEN，发行了与林俊杰合作的首张单曲“The Show”，如今，全新remix版本“The Show (Steve Aoki & Lucas & Steve Remix)”再度释出。Steve Aoki曾两次获得格莱美奖提名，全平台每月粉丝量超6500万，仅Spotify每月就有1540万听众。他在Spotify上的播放量超过50亿次，曾与BTS、Maluma、Lil Uzi Vert、Blink 182、Migos、J Balvin和Machine Gun Kelly等众多艺人合作。林俊杰则是一位创作能力极其出色的音乐人，20年辉煌的职业生涯中，他在亚洲的知名度飙升。该混音版本的制作团队Lucas & Steve在Spotify每月拥有超300万听众，流媒体收听人数超过140万。三组艺术家合力呈现“The Show (Steve Aoki & Lucas & Steve Remix)”，官方歌词视频也将随歌曲上架，敬请欣赏。",
+    "subType": "录音室版",
+    "alias": [],
+    "description": "★空降告示牌专辑榜冠军，刷新全美12年来首周最佳百万销售纪录，格莱美「年度专辑」、「最佳流行演唱专辑」两大奖肯定\n\n★收录原版歌曲16首，加码收录首度曝光〈Slut!〉、〈Say Don’t Go〉等5首全新创作共21首梦幻曲目\n\n霉霉Taylor Swift全新重制专辑《1989 (Taylor's Version)》于10月27日发行，这是Taylor Swift自2019年宣布重制专辑以来第四张重制的专辑。最早发行于2014年的《1989》，以出生年份命名，是泰勒的第一张流行专辑；是转型代表作与里程碑式的存在；更是无数乐评媒体最佳专辑的首选。时隔九年推出重制版本，由16首已发行作品与专辑主打在内的5首新歌共同构成——注入了非同一般的新鲜活力，再次展现了泰勒丝对于流行音乐超强的敏锐性与掌控度！\n\n泰勒丝这三个字就是歌坛的奇迹！不断刷新惊人纪录，包括告示牌冠军周数最多女歌手头衔、史上首位女歌手连创5支告示牌乡村榜Top10纪录、拥有10支告示牌冠军单曲纪录，靠着【folklore】、【evermore】、【Fearless (Taylor’s Version)】专辑，在告示牌成为首位女歌手一年内连续三张专辑登顶，更是首位在告示牌夺下6张「年度销售冠军」的艺人；英国则刷新The Beatles 54年前纪录，成为史上首位歌手在最短天数内送上3张冠军专辑。惊人创下Spotify一天内累积最多串流量女歌手，并在2023年认证最多串流量女歌手。最新巡演「The Eras Tour」成为美国史上票房最高的女艺人巡迴演唱会，造成的文化影响与经济效应，「今日美国」形容为「重大纪念性历史事件」，如今又以《Taylor Swift: The Eras Tour》演唱会电影创下奇蹟，北美首周将近破亿票房，成为史上最卖座演唱会电影，似乎没有一件事是她无法做到的！\n\n泰勒丝凭藉著2006-2023年间10张专辑，与3张重制版专辑，共摘下12张告示牌冠军专辑，总计在全球超过2亿张专辑单曲销售，并荣获12座格莱美奖、49项吉尼斯世界纪录、37座告示牌相关奖项，她也多次入列时代杂志「年度百大风云人物」，也早在2010年就进入词曲名人堂之列，2015年更以最年轻歌手之姿入列滚石杂志「史上最伟大百大词曲作家」。一路过关斩将的泰勒丝，在2019年与业界知名经纪人Scooter Braun爆发版权纠纷，泰勒丝霸气宣布将把自己生涯前6张作品全数重新录制，在接续著【Fearless】、【Red】、【Speak Now】的重发后，泰勒丝在「The Eras Tour」洛杉矶场上惊喜官宣第四阶段的重录计划就是【1989】，再次掀起全球乐迷疯狂讨论！\n\n【1989】是泰勒丝的出生年份，泰勒丝也选择在此展开自己的音乐实验时期，改变创作方式与曲风，象征再一次的音乐艺术和文化重生。幕后制作群有冠军制造机Max Martin、Shellback等名制作人入座，更是泰勒丝与音乐制作人好友Jack Antonoff首次在专辑上的合作。收录首波主打“Shake It Off”，停留告示牌流行榜中50周之久，期间四度重回冠军宝座，写下第一位拥有钻石认证专辑和单曲的女歌手记录，获得格莱美「年度制作」、「年度歌曲」、「最佳流行歌手」三大奖入围；“Blank Space”蝉联全美流行榜7周冠军，累积8白金销售认证，入列滚石杂志「史上500首经典歌曲」，再度提名格莱美三大奖；“Bad Blood”拿下生涯第4支告示牌单曲榜冠军，获颁6白金销售；攀上全美流行榜第5名，稳坐舞曲点播榜冠军，热卖400万张的“Wildest Dreams”等…。此【1989 (Taylor’s Version)】除了收藏原始16首曲目，最后又再追入私藏大礼“Slut!”、“Say Don`t Go”等5首从未曝光的「From The Vault」珍贵曲目，绝对值得珍藏。",
     "tags": "",
-    "name": "The Show (Steve Aoki & Lucas & Steve Remix)",
-    "id": 182099803,
+    "name": "1989 (Taylor's Version)",
+    "id": 177237088,
     "type": "专辑",
-    "size": 1,
-    "picId_str": "109951169219663310",
+    "size": 21,
+    "picId_str": "109951169026162735",
     "info": {
       "commentThread": {
-        "id": "R_AL_3_182099803",
+        "id": "R_AL_3_177237088",
         "resourceInfo": {
-          "id": 182099803,
+          "id": 177237088,
           "userId": -1,
-          "name": "The Show (Steve Aoki & Lucas & Steve Remix)",
-          "imgUrl": "http://p3.music.126.net/oizUxZtLMauHAPu9n-GoRA==/109951169219663310.jpg",
+          "name": "1989 (Taylor's Version)",
+          "imgUrl": "http://p4.music.126.net/PA01TRYxcT28W_3B_SoPKw==/109951169026162735.jpg",
           "creator": null,
           "encodedId": null,
           "subTitle": null,
           "webUrl": null
         },
         "resourceType": 3,
-        "commentCount": 105,
+        "commentCount": 4520,
         "likedCount": 0,
-        "shareCount": 61,
-        "hotCount": 0,
+        "shareCount": 23914,
+        "hotCount": 167,
         "latestLikedUsers": null,
-        "resourceId": 182099803,
+        "resourceId": 177237088,
         "resourceOwnerId": -1,
-        "resourceTitle": "The Show (Steve Aoki & Lucas & Steve Remix)"
+        "resourceTitle": "1989 (Taylor's Version)"
       },
       "latestLikedUsers": null,
       "liked": false,
       "comments": null,
       "resourceType": 3,
-      "resourceId": 182099803,
-      "commentCount": 105,
+      "resourceId": 177237088,
+      "commentCount": 4520,
       "likedCount": 0,
-      "shareCount": 61,
-      "threadId": "R_AL_3_182099803"
+      "shareCount": 23914,
+      "threadId": "R_AL_3_177237088"
     }
   }
 }

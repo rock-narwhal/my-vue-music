@@ -32,7 +32,7 @@ export default {
       </li>
     </ul>
     <ul class="music-list flex-box" v-for="(item,index) in dataList" :key="item.id" @dblclick="dbClick(item.id)">
-      <li :style="{width:titles[0].width}">{{ index < 10 ? '0' + index : index}}</li>
+      <li :style="{width:titles[0].width}">{{ index < 9 ? '0' + (index+1) : (index+1) }}</li>
       <li :style="{width:titles[1].width}">{{ item.name }}</li>
       <li :style="{width:titles[2].width}">{{ item.ar[0].name }}</li>
       <li :style="{width:titles[3].width}">{{ item.al.name }}</li>
@@ -48,11 +48,11 @@ export default {
 
 ul {
   width: 100%;
-  height: 30px;
+  height: 36px;
 
   li {
     //vertical-align: middle;
-    line-height: 30px;
+    line-height: 36px;
   }
 }
 

@@ -9,3 +9,5 @@ export const cloudSearch = ({limit,offset,type,keywords}) => get('/cloudsearch',
 export const songDetail = (id) => get('/song/detail',{id})
 /** 专辑详情 */
 export const albumDetail = (id) => get('/album', {id})
+
+export const albumDetailDynamic = (id) => get('/album/detail/dynamic', {id})
