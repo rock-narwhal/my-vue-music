@@ -53,6 +53,9 @@ export default {
           break
       }
       return url + '?param=100y100'
+    },
+    toAlbumDetail(id) {
+      this.$router.push('/detail/album?id=' + id)
     }
   }
 }
@@ -65,6 +68,7 @@ export default {
         v-infinite-scroll="load"
         :infinite-scroll-disabled="disabled"
         infinite-scroll-delay="300"
+        @click="toAlbumDetail(item.id)"
     >
       <div @click="clickItem(item.id)" class="clearfix container">
         <div class="img-wrap float-item" :style="{'width': `${coverWidth}%`}">

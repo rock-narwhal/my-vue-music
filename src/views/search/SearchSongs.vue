@@ -1,9 +1,11 @@
 <script>
 import {cloudSearch} from "@/api/api_music";
 import {timeConvert} from "@/util/dateUtil";
+import MusicList from "@/components/list/MusicList.vue";
 
 export default {
   name: "SearchSongs",
+  components: {MusicList},
   data() {
     return {
       isLoading: true,
@@ -17,6 +19,13 @@ export default {
         type: 1,//单曲
         keywords: '',
       },
+      titles:[
+        {val:'',width: '5%'},
+        {val:'音乐标题',width:'45%'},
+        {val:'歌手',width:'20%'},
+        {val:'专辑',width:'20%'},
+        {val:'时长',width:'10%'}
+      ],
       songList: []
     }
   },
@@ -51,46 +60,7 @@ export default {
   <div>
     <!--  搜索 单曲页面  {{$route.query}}-->
     <el-skeleton :rows="10" animated v-show="isLoading"></el-skeleton>
-    <el-table
-        :data="songList"
-        stripe
-        style="width: 100%"
-        v-show="!isLoading"
-        @cell-click="playMusic">
-      <el-table-column
-          type="index"
-          width="60">
-      </el-table-column>
-      <el-table-column
-          label="音乐标题"
-          width="480">
-        <template v-slot="scope">
-          <span>{{ scope.row.name }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column
-          label="歌手"
-          width="360">
-        <template v-slot="scope">
-          <span>{{ scope.row.ar[0].name }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column
-          label="专辑"
-          width="360">
-        <template v-slot="scope">
-          <span>{{ scope.row.al.name }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column
-          label="时长"
-          width="100">
-        <template v-slot="scope">
-          <span>{{ convert(scope.row.dt) }}</span>
-        </template>
-      </el-table-column>
-    </el-table>
-
+    <MusicList v-show="!isLoading" style="margin:0 30px" :titles="titles" :data-list="songList" :dbClick="playMusic"></MusicList>
   </div>
 </template>
 

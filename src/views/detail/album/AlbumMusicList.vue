@@ -18,6 +18,7 @@ export default {
         {val:'时长',width:'10%'}
       ],
       albumId:'',
+      isLoading: false
     }
   },
   created() {
@@ -28,16 +29,24 @@ export default {
   },
   methods:{
     async getAlbumMusicList(){
+      this.isLoading = true
       const res = await albumDetail(this.albumId)
       if(res.code !== 200) return
       this.musicList = res.songs
+      this.isLoading = false
+    },
+    playMusic(id){
+
     }
   }
 }
 </script>
 
 <template>
-<MusicList style="margin:0 30px" :titles="titles" :data-list="musicList"></MusicList>
+  <div>
+    <el-skeleton :rows="10" animated v-show="isLoading"></el-skeleton>
+    <MusicList v-show="!isLoading" style="margin:0 30px" :titles="titles" :data-list="musicList" :dbClick="playMusic"></MusicList>
+  </div>
 </template>
 
 <style scoped lang="less">

@@ -15,7 +15,7 @@ export default {
       ],
       album: {},
       songs: [],
-      albumInfo:{}
+      albumInfo: {}
     }
   },
   created() {
@@ -34,9 +34,9 @@ export default {
       this.songs = res.songs
     },
     //专辑动态信息，收藏分享数等
-    async getAlbumDynamic(){
+    async getAlbumDynamic() {
       const res = await albumDetailDynamic(this.album.id)
-      if(res.code !== 200) return
+      if (res.code !== 200) return
       this.albumInfo = res
     }
   },
@@ -45,7 +45,7 @@ export default {
       return format(this.album.publishTime)
     },
     // 判断歌曲中是否需要VIP
-    checkVip(){
+    checkVip() {
       return this.songs.filter(item => item.fee === 1).length > 0
     }
   }
@@ -59,18 +59,22 @@ export default {
       <div class="album-info">
         <div class="font-24" style="font-weight: bold">{{ album.name }}</div>
         <div class="button-group">
-<!--          按钮-->
+          <!--          按钮-->
           <button v-show="checkVip" style="background-color: #ec4141; color: white">
-            <svg-icon color="#fff" fillColor="#fff" icon-class="play-fill"></svg-icon> 开通VIP畅听专辑
+            <svg-icon color="#fff" fillColor="#fff" icon-class="play-fill"></svg-icon>
+            开通VIP畅听专辑
           </button>
           <button v-show="!this.albumInfo.isSub">
-            <svg-icon icon-class="collection-records"></svg-icon> 收藏({{this.albumInfo.subCount}})
+            <svg-icon icon-class="collection-records"></svg-icon>
+            收藏({{ this.albumInfo.subCount }})
           </button>
           <button>
-            <svg-icon icon-class="download-one"></svg-icon> VIP下载
+            <svg-icon icon-class="download-one"></svg-icon>
+            VIP下载
           </button>
           <button v-show="this.albumInfo">
-            <svg-icon icon-class="share"></svg-icon> {{this.albumInfo.shareCount}}
+            <svg-icon icon-class="share"></svg-icon>
+            {{ this.albumInfo.shareCount }}
           </button>
         </div>
         <div v-if="album.artist">歌手:{{ album.artist.name }}</div>
@@ -98,9 +102,11 @@ export default {
 
     .album-info {
       margin-left: 30px;
-      .button-group{
+
+      .button-group {
         margin: 20px 0;
-        button{
+
+        button {
           height: 30px;
           border-radius: 15px;
           border: 1px solid #dadada;
