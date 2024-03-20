@@ -280,7 +280,7 @@ export default {
         margin: 0 10px;
 
         &.pause-btn {
-          height: 36px;
+          height: 34px;
           width: 36px;
           border-radius: 50%;
           border: none;
@@ -292,9 +292,10 @@ export default {
       display: flex;
       justify-content: space-between;
       width: 100%;
+      height: 36px;
 
       span {
-        line-height: 35px;
+        line-height: 36px;
         color: #999999;
       }
 

@@ -76,6 +76,7 @@ export default {
   width: 100%;
   height: auto;
   display: flex;
+  border-bottom: 1px solid #d7d0d0;
 
   .aside {
     width: 235px;
@@ -96,8 +97,7 @@ export default {
 .footer {
   position: absolute;
   height: 80px;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
-  border-top: 1px solid #d7d0d0;
 }
 </style>
