@@ -238,15 +238,15 @@ export default {
     },
     //跳转到专辑详情
     toAlbumDetail(id) {
-
+      this.$router.push('/detail/album?id='+id)
     },
     //跳转到歌手详情
     toArtistDetail(id) {
-
+      this.$router.push('/detail/artist?id='+id)
     },
     //跳转到歌单
     toPlayListDetail(id) {
-
+      this.$router.push('/detail/playlist?id='+id)
     }
   },
   computed: {

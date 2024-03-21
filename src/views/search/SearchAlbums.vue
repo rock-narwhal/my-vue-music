@@ -40,6 +40,9 @@ export default {
       this.pageInfo.total = res.result.albumCount
       this.isLoading = false
     },
+    toAlbumDetail(id) {
+      this.$router.push('/detail/album?id=' + id)
+    }
   }
 }
 </script>
@@ -48,7 +51,7 @@ export default {
   <div class="album-wrap">
     <!--  搜索 单曲页面  {{$route.query}}-->
     <el-skeleton :rows="10" animated v-show="isLoading"></el-skeleton>
-    <ImgWidthList :list="list" mode="al">
+    <ImgWidthList :list="list" mode="al" @clickItem="toAlbumDetail">
       <template v-slot="{scope}">
         {{ scope.artist.name }} <span v-if="scope.artist.trans">({{ scope.artist.trans }})</span>
       </template>

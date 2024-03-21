@@ -46,9 +46,6 @@ export default {
       this.pageInfo.total = res.result.songCount
       this.isLoading = false
     },
-    convert(milli) {
-      return timeConvert(milli / 1000)
-    },
     playMusic(song){
 
     }

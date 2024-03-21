@@ -134,7 +134,7 @@ export default [
                         name: 'AlbumDetail',
                         path: 'album',
                         component: () => import('@/views/detail/album/AlbumDetail.vue'),
-                        redirect:'/detail/album/musicList',
+                        redirect: '/detail/album/musicList',
                         children: [
                             {
                                 name: 'AlbumMusicList',
@@ -150,6 +150,29 @@ export default [
                                 name: 'AlbumInfo',
                                 path: 'info',
                                 component: () => import('@/views/detail/album/AlbumInfo.vue')
+                            }
+                        ]
+                    },
+                    {
+                        name: 'PlaylistDetail',
+                        path: 'playlist',
+                        component: () => import('@/views/detail/playlist/PlaylistDetail.vue'),
+                        redirect: '/detail/playlist/songs',
+                        children: [
+                            {
+                                name: 'PlaylistSongs',
+                                path: 'songs',
+                                component: () => import("@/views/detail/playlist/PlaylistSongs.vue")
+                            },
+                            {
+                                name: 'PlaylistComments',
+                                path: 'comments',
+                                component: () => import('@/views/detail/playlist/PlaylistComments.vue')
+                            },
+                            {
+                                name: 'PlaylistCollectors',
+                                path: 'collectors',
+                                component: () => import('@/views/detail/playlist/PlaylistCollectors.vue')
                             }
                         ]
                     }

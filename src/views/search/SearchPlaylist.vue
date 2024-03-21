@@ -43,6 +43,9 @@ export default {
     },
     numConvert(num){
       return toCNNum(num)
+    },
+    toPlaylistDetail(id){
+      this.$router.push('/detail/playlist?id='+id)
     }
   }
 }
@@ -51,7 +54,7 @@ export default {
 <template>
   <div class="">
     <el-skeleton :rows="10" animated v-show="isLoading"></el-skeleton>
-    <ImgWidthList :list="list" mode="pl">
+    <ImgWidthList :list="list" mode="pl" @clickItem="toPlaylistDetail">
       <template v-slot="{scope}">
         <div class="float-item track-count">{{ scope.trackCount }} 首</div>
         <div class="float-item ar-name">by {{ scope.creator.nickname }}</div>
