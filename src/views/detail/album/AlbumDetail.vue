@@ -19,6 +19,12 @@ export default {
       albumInfo: {}
     }
   },
+  watch:{
+    '$route.query'(val) {
+      this.album.id = val.id
+      this.getAlbumDetail()
+    }
+  },
   created() {
     if (this.$route.query.id) {
       this.album.id = this.$route.query.id

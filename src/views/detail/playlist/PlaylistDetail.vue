@@ -19,6 +19,12 @@ export default {
       creator: {}
     }
   },
+  watch:{
+    '$route.query'(val) {
+      this.playlistInfo.id = val.id
+      this.queryPlaylistInfo()
+    }
+  },
   created() {
     if (this.$route.query.id) {
       this.playlistInfo.id = this.$route.query.id

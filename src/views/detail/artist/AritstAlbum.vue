@@ -27,6 +27,12 @@ export default {
       this.getArtistAlbum()
     }
   },
+  watch:{
+    '$route.query'(val) {
+      this.queryInfo.id = val.id
+      this.getArtistAlbum()
+    }
+  },
   methods: {
     async getArtistAlbum() {
       this.isLoading = true

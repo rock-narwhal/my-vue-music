@@ -17,6 +17,12 @@ export default {
       artist: {}
     }
   },
+  watch:{
+    '$route.query'(val) {
+      this.artist.id = val.id
+      this.getArtistDetail()
+    }
+  },
   created() {
     this.artist.id = this.$route.query.id
     this.getArtistDetail()

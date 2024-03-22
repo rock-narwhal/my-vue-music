@@ -21,6 +21,12 @@ export default {
       isLoading: false
     }
   },
+  watch:{
+    '$route.query'(val) {
+      this.albumId = val.id
+      this.getAlbumMusicList()
+    }
+  },
   created() {
     if(this.$route.query.id){
       this.albumId = this.$route.query.id

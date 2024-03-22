@@ -25,6 +25,12 @@ export default {
       this.queryPlaylistSongs()
     }
   },
+  watch:{
+    '$route.query'(val) {
+      this.playlistId = val.id
+      this.queryPlaylistSongs()
+    }
+  },
   methods:{
     async queryPlaylistSongs(){
       this.isLoading = true

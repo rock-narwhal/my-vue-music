@@ -30,10 +30,16 @@ export default {
     }
   },
   created() {
-    let keywords = this.$route.query.keywords
-    keywords = decodeURI(keywords)
+    let keywords = decodeURI(this.$route.query.keywords)
     this.queryInfo.keywords = keywords.replaceAll(/\s+/g, '+')
     this.doSearch()
+  },
+  watch: {
+    '$route.query'(val) {
+      let keywords = decodeURI(val.keywords)
+      this.queryInfo.keywords = keywords.replaceAll(/\s+/g, '+')
+      this.doSearch()
+    }
   },
   methods: {
     async doSearch() {
