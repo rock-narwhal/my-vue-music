@@ -27,12 +27,10 @@ export default {
       this.artistInfo.briefDesc = res.briefDesc
       this.artistInfo.introduction = res.introduction
       this.artistInfo.introduction = this.artistInfo.introduction.map(item => {
-        console.log(item.ti)
         let text = item.txt
         let arr = text.split('\n').map(part => {
           return `<p class="content">${part}</p>`
         })
-        console.log(arr)
         return {ti: item.ti, txt: arr.join('')}
       })
     },

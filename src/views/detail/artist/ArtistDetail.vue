@@ -18,7 +18,6 @@ export default {
     }
   },
   created() {
-    console.log('歌手详情页', this.$route.query)
     this.artist.id = this.$route.query.id
     this.getArtistDetail()
   },
@@ -26,7 +25,6 @@ export default {
     async getArtistDetail() {
       const res = await artistDetail(this.artist.id)
       if (res.code !== 200) return
-      console.log('查询歌手详情 ', res.data)
       this.artist = res.data.artist
     }
   }

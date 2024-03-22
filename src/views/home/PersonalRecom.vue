@@ -92,20 +92,16 @@ export default {
     async getImgList() {
       const res = await getBanner()
       if (res.code !== 200) return
-      console.log('getImgList', res)
       this.imgList = Object.freeze(res.banners)
     },
     //点击轮播图
     clickImage(item) {
-      console.log('PersonalRecom: clickImage', item)
     },
     // 跳转到首页/歌单
     toPlayList() {
-      console.log('PersonalRecom: toPlayList')
     },
     //跳转到播放列表详情
     toPlayListDetail(id) {
-      console.log("PersonalRecom: toPlayListDetail", id)
       // if(typeof id === 'number'){
       //   this.$router.push({
       //     path:''
@@ -116,12 +112,10 @@ export default {
     playRecommend(id) {
       // const list =
       const rec = this.recommendList.filter(item => item.id === id)
-      console.log("PersonalRecom: playRecommend", id, rec)
     },
     // 播放歌单中的歌曲
     playRecSong(id) {
       const rec = this.recSongList.filter(item => item.id === id)
-      console.log("PersonalRecom: playRecommend", id, rec)
     }
   }
 }

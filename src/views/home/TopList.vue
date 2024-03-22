@@ -35,7 +35,6 @@ export default {
     }
   },
   created(){
-    console.log("TopList created")
     this.getTopList()
   },
   computed:{
@@ -44,7 +43,6 @@ export default {
     },
     // 官方榜单
     officialTopList(){
-      console.log('officialTopList')
       if (this.topList.length > 0) {
         return this.topList.slice(0, 4)
       } else {
@@ -63,16 +61,13 @@ export default {
     async getTopList(){
       const res = await getTopList()
       if(res.code !== 200) return
-      console.log("topList: ",res.list)
       this.topList = res.list
     },
     //播放歌单
     clickPlay(id){
-      console.log('TopList: clickPlay',id)
     },
     //跳转到榜单详情
     toListDetail(id){
-      console.log('TopList: toListDetail',id)
     }
   }
 }

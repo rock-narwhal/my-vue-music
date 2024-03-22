@@ -5,8 +5,6 @@ export default{
     },
     // 播放音乐
     playMusic(state, music){
-        console.log("mutation playMusic state : ",state.playingInfo)
-        console.log("mutation playMusic music : ",music)
         state.playingInfo.songId = music.id
         state.playingInfo.type = 0
         state.playingInfo.current = 0
@@ -15,7 +13,6 @@ export default{
         state.playingInfo.coverUrl = music.album.picUrl
         state.playingInfo.album = music.album
         state.playingInfo.artists = music.artists
-        console.log("mutation playMusic state : ",state.playingInfo)
         this.commit('addToPlayList', music)
         state.playingInfo.pause = false
     },

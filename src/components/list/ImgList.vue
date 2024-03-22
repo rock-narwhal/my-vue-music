@@ -63,11 +63,9 @@ export default {
   },
   methods: {
     clickPlay(id){
-      console.log('ImgList: clickPlay',id)
       this.$emit('clickPlay',id)
     },
     clickImg(id) {
-      console.log('ImgList: clickImg',id)
       this.$emit('clickImg',id)
     },
     picUrl(item) {

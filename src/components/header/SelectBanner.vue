@@ -57,7 +57,6 @@ export default {
     //点击选项
     clickOpt(key, val){
       if(this.queryParam[key] === val){
-        console.log('SelectBanner: clickOpt 查询条件不变',key, val)
         return
       }
       this.queryParam[key] = val

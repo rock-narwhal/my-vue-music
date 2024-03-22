@@ -156,15 +156,12 @@ export default {
   },
   methods: {
     inputBlur(){
-      console.log("触发blur")
       this.showInfoTip = false
     },
     // 跳转到搜索页面
     toSearch() {
-      console.log('to search')
       if (!this.keywords) return
       this.$refs.searchInput.blur()
-      console.log('跳转搜索页面')
       this.$router.push(`/search/songs?keywords=${encodeURIComponent(this.keywords)}`)
       this.setHistory(this.keywords)
     },
@@ -192,7 +189,6 @@ export default {
       if(!val) return
       const res = await getSuggest({keywords:val})
       if(res.code !== 200) return
-      console.log('getSuggest ',res)
       this.suggestInfo = res.result
     },
     getSearchHistory() {
@@ -213,20 +209,17 @@ export default {
       }).catch(()=>{})
     },
     async getHotSearch(){
-      console.log("触发 getHotSearch")
       this.showInfoTip = true
       if(this.keywords){
         await this.getSuggest(this.keywords)
       }
       if(this.hotList.length > 0) return
       const res = await getHotSearch()
-      console.log('getHotSearch res',res)
       if(res.code !== 200) return
       this.hotList = res.data
     },
     // 点击历史项或者搜索项
     clickHot(keyword) {
-      console.log(keyword)
       if(keyword){
         this.keywords = keyword
         this.toSearch()

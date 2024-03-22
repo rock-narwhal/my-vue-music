@@ -55,7 +55,6 @@ export default {
 
   },
   created() {
-    console.log('layout组件被创建')
     this.$bus.$on('scrollTop',this.scrollTop)
   },
   watch: {

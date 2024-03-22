@@ -38,14 +38,12 @@ export default {
   },
   methods: {
     clickPlay(id) {
-      console.log('TopListBanner :clickPlay', id)
       this.$emit('clickPlay',id)
     },
     viewMore(id){
       this.$emit('viewMore',id)
     },
     async getDetailList(id) {
-      console.log('TopListBanner: loadDetailList', id)
       const res = await getPlayListDetail(id)
       if (res.code !== 200) return []
       this.detailList.push(res.playlist.tracks.splice(0, 5))
@@ -53,7 +51,6 @@ export default {
   },
   watch:{
     list(){ //等this.list的数据刷新后再获取detailList的数据
-      console.log("watch list",this.list)
       this.detailList = []
       this.list.forEach((item) =>{
         this.getDetailList(item.id)
@@ -61,7 +58,6 @@ export default {
     }
   },
   created() {
-    console.log('TopListBanner created', this.list)
     this.list.forEach((item) => {
       this.getDetailList(item.id)
     })

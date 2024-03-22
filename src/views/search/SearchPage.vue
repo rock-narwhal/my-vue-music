@@ -32,7 +32,6 @@ export default {
   },
   watch: {
     '$route.query'(val) {
-      console.log('SearchPage 监听路由参数变化 ', val)
       this.queryInfo.keywords = val.keywords
       this.searchAlbum()
     }
@@ -43,7 +42,6 @@ export default {
       if (this.queryInfo.keywords) {
         const res = await cloudSearch(this.queryInfo)
         if (res.code !== 200) return
-        console.log('SearchPage 搜索歌单结果 : ', res.result)
         if (res.result.playlists.length > 0) {
           this.suggest = res.result.playlists[0]
         }

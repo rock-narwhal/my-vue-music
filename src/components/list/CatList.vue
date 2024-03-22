@@ -51,11 +51,9 @@ export default {
   },
   methods: {
     onTitleCLick() {
-      console.log('onTitleCLick')
       this.clickTitle || this.clickTitle()
     },
     onTagClick(name) {
-      console.log('onTagClick', name)
       this.clickTag(name)
     }
   }

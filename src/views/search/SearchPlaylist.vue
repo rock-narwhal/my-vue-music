@@ -36,7 +36,6 @@ export default {
       this.list = this.list.filter(() => false)
       const res = await cloudSearch(this.queryInfo)
       if (res.code !== 200) return
-      console.log('SearchAlbum doSearch', res.result)
       this.list.push(...res.result.playlists)
       this.pageInfo.total = res.result.playlistCount
       this.isLoading = false

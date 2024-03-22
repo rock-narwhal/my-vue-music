@@ -102,7 +102,6 @@ export default {
   },
   watch: {
     'playingInfo.songId'() {
-      console.log('songid 改变')
       this.getMusicUrl()
       this.progress = 0
     },
@@ -175,7 +174,6 @@ export default {
     // 播放、暂停切换
     playOrPause() {
       if (!this.playingInfo.songId) return
-      console.log('playOrPause', this.playingInfo.pause)
       this.playingInfo.pause = !this.playingInfo.pause
     },
   }

@@ -116,7 +116,6 @@ export default {
     },
     //所有分类
     async getAllCats() {
-      console.log('PlayList: getAllCats', this.allCats)
       if (this.allCats.length > 0) return
       const res = await getAllCat()
       if (res.code !== 200) return
@@ -129,7 +128,6 @@ export default {
     },
     // 获取经典歌单 banner信息
     async getHighInfo(cat) {
-      console.log('PlayList: getHighInfo', cat)
       const res = await getHighQuality(1, cat)
       if (res.code !== 200) return
       this.hasHighQuality = res.playlists.length > 0
@@ -146,7 +144,6 @@ export default {
       this.isLoading = false
     },
     changeCat(name) {
-      console.log('PlayList: changeCat', name)
       this.tagBtn = name
       this.queryInfo.cat = name
       this.closeCatList()
@@ -156,11 +153,9 @@ export default {
       this.showAllCats = !this.showAllCats
     },
     closeCatList() {
-      console.log('closeCatList')
       this.showAllCats = false
     },
     onPageChange(page) {
-      console.log('onPageChange: ', page)
       if (page < 1 || page > this.pageInfo.total || page === this.pageInfo.currentPage) return
       this.pageInfo.currentPage = page
       this.queryInfo.offset = (page - 1) * this.queryInfo.limit
