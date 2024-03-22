@@ -1,5 +1,5 @@
 <template>
-<!--  歌单页面-->
+  <!--  歌单页面-->
   <div class="container">
     <!--    精品歌单banner-->
     <div class="banner" v-if="hasHighQuality">
@@ -44,7 +44,8 @@
     <!--    歌单列表-->
     <ImgList type="playlist"
              :list="playList"
-             class="mtop-10">
+             class="mtop-10"
+             @clickImg="toPlaylistDetail">
       <template v-slot="{item}">
         <div class="text-hidden"></div>
         {{ item.name }}
@@ -166,6 +167,9 @@ export default {
       this.getPlayList()
       //滚到到顶部
       this.$bus.$emit('scrollTop')
+    },
+    toPlaylistDetail(id) {
+      this.$router.push('/detail/playlist?id='+id)
     }
   }
 }
@@ -223,7 +227,8 @@ export default {
       .circle-btn {
         color: black;
         border: 1px solid #cbcbcb;
-        &:hover{
+
+        &:hover {
           background-color: #f2f2f2;
         }
       }
@@ -240,7 +245,8 @@ export default {
       float: right;
     }
   }
-  .pagination{
+
+  .pagination {
     width: 100%;
     display: flex;
     justify-content: center;

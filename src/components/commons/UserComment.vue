@@ -50,10 +50,15 @@ export default {
   .comment-content{
     width: 100%;
     margin-left: 10px;
+    font-size: 12px;
     //float: left;
     .replied-content{
+      display: block;
       background-color: #eeeeee;
-      border-radius: 3px;
+      border-radius: 5px;
+      margin: 5px 0;
+      line-height: 30px;
+      vertical-align: middle;
     }
     .button-wrapper{
       margin-right: 5px;
@@ -67,7 +72,6 @@ export default {
     }
   }
   .content-block{
-    height: 20px;
     line-height: 20px;
   }
 }

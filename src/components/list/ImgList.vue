@@ -72,11 +72,11 @@ export default {
     },
     picUrl(item) {
       if(this.type === 'playlist'){
-        return `${item.picUrl ? item.picUrl : item.coverImgUrl}?param=300y300`
+        return `${item.picUrl ? item.picUrl : item.coverImgUrl}`
       }else if(this.type === 'artist'){
-        return `${item.img1v1Url}?param=300y300`
+        return `${item.img1v1Url}`
       }else if (this.type === 'album') {
-        return `${item.picUrl}?param=300y300`
+        return `${item.picUrl}`
       }
     },
     load(){

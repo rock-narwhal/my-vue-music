@@ -18,3 +18,5 @@ export const getPlayListDetail = (id) => get('/playlist/detail',{id})
 export const playlistSongs = (id) => get('/playlist/track/all',{id})
 /* 歌单动态信息，点赞收藏等 */
 export const playlistDynamic = (id) => get('/playlist/detail/dynamic', {id})
+/* 歌单评论 */
+export const playlistComments = ({id, offset, limit}) => get('/comment/playlist', {id, offset, limit})
