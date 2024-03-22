@@ -2,33 +2,40 @@
 // import 'src/assets/icons'
 export default {
   name: "SvgIcon",
-  props:{
-    iconClass:{
-      type:String,
-      require:false,
+  props: {
+    iconClass: {
+      type: String,
+      require: false,
     },
-    className:{
-      type:String,
-      default:'',
+    className: {
+      type: String,
+      default: '',
     },
-    color:{
+    color: {
       type: String,
       default: '#333'
     },
-    fillColor:{
+    fillColor: {
       type: String,
       default: 'none'
     }
   },
-  computed:{
-    iconName(){
+  computed: {
+    iconName() {
       return `#icon-${this.iconClass}`
     },
-    svgClass(){
-      if(this.className){
+    svgClass() {
+      if (this.className) {
         return 'svg-icon ' + this.className
-      }else{
+      } else {
         return 'svg-icon'
+      }
+    },
+    verticalAlign() {
+      if (this.className.includes('font-20')) {
+        return '-0.25em'
+      } else {
+        return '-0.15em'
       }
     }
   }
@@ -36,16 +43,17 @@ export default {
 </script>
 
 <template>
-  <svg :class="svgClass" :style="{fill: fillColor,stroke: color}" aria-hidden="true">
+  <svg :class="svgClass" :style="{fill: fillColor,stroke: color, 'vertical-align': verticalAlign}" aria-hidden="true">
     <use :xlink:href="iconName"></use>
   </svg>
 </template>
 
 <style scoped lang="less">
-.svg-icon{
+.svg-icon {
   width: 1em;
   height: 1em;
-  vertical-align: -0.15em;
+  //vertical-align: -0.25em;
+  line-height: 30px;
   //fill: currentColor;
   overflow: hidden;
 }

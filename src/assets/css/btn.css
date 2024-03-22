@@ -64,6 +64,29 @@
     border-radius: 15px;
 }
 
+.cir-btn-red{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    outline: 0;
+    background: #ec4141;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    vertical-align: middle;
+}
+
+.cir-btn-white{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    outline: 0;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-radius: 15px;
+    vertical-align: middle;
+}
+
 
 @media screen and (max-width:415px) {
     .btn-text {

@@ -14,3 +14,7 @@ export const getHighQuality = (limit, cat, before) => get('/top/playlist/highqua
 export const getPlayListByCat = ({limit, order, cat, offset}) => get('/top/playlist',{ limit, order, cat, offset })
 /* 歌单详情 */
 export const getPlayListDetail = (id) => get('/playlist/detail',{id})
+/* 歌单歌曲列表 */
+export const playlistSongs = (id) => get('/playlist/track/all',{id})
+/* 歌单动态信息，点赞收藏等 */
+export const playlistDynamic = (id) => get('/playlist/detail/dynamic', {id})
