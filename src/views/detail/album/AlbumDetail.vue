@@ -2,10 +2,11 @@
 import TabMenu from "@/components/menu/TabMenu.vue";
 import {albumDetail, albumDetailDynamic} from "@/api/api_music";
 import {format} from "@/util/dateUtil";
+import DetailBanner from "@/components/commons/DetailBanner.vue";
 
 export default {
   name: "AlbumDetail",
-  components: {TabMenu},
+  components: {DetailBanner, TabMenu},
   data() {
     return {
       menuList: [
@@ -55,31 +56,37 @@ export default {
 <template>
   <div class="album-detail">
     <div class="album-banner">
-      <img v-lazy="album.picUrl" v-show="album.picUrl" alt="">
-      <div class="album-info">
-        <div class="font-24" style="font-weight: bold">{{ album.name }}</div>
-        <div class="button-group">
-          <!--          按钮-->
-          <button v-show="checkVip" style="background-color: #ec4141; color: white">
-            <svg-icon color="#fff" fillColor="#fff" icon-class="play-fill"></svg-icon>
-            开通VIP畅听专辑
-          </button>
-          <button v-show="!this.albumInfo.isSub">
-            <svg-icon icon-class="collection-records"></svg-icon>
-            收藏({{ this.albumInfo.subCount }})
-          </button>
-          <button>
-            <svg-icon icon-class="download-one"></svg-icon>
-            VIP下载
-          </button>
-          <button v-show="this.albumInfo">
-            <svg-icon icon-class="share"></svg-icon>
-            {{ this.albumInfo.shareCount }}
-          </button>
-        </div>
-        <div v-if="album.artist">歌手:{{ album.artist.name }}</div>
-        <div>时间:{{ pubTime }}</div>
-      </div>
+      <detail-banner :avatar="album.picUrl">
+        <template v-slot:title>
+          <div class="font-24" style="font-weight: bold">{{ album.name }}</div>
+        </template>
+        <template v-slot:buttons>
+          <div class="button-group">
+            <!--          按钮-->
+            <button class="cir-btn-red pointer font-14" v-show="checkVip"
+                    style="background-color: #ec4141; color: white">
+              <svg-icon icon-class="play-fill-white" class-name="font-20"></svg-icon>
+              开通VIP畅听专辑
+            </button>
+            <button class="cir-btn-white pointer font-14" v-show="!albumInfo.isSub">
+              <svg-icon icon-class="collection-records" class-name="font-18"></svg-icon>
+              收藏({{ albumInfo.subCount }})
+            </button>
+            <button class="cir-btn-white pointer font-14">
+              <svg-icon icon-class="download-one" class-name="font-18"></svg-icon>
+              VIP下载
+            </button>
+            <button class="cir-btn-white pointer font-14" v-show="albumInfo">
+              <svg-icon icon-class="share" class-name="font-18"></svg-icon>
+              {{ albumInfo.shareCount }}
+            </button>
+          </div>
+        </template>
+        <template v-slot:others>
+          <div v-if="album.artist">歌手:{{ album.artist.name }}</div>
+          <div>时间:{{ pubTime }}</div>
+        </template>
+      </detail-banner>
     </div>
     <TabMenu style="margin: 0 30px" :menu-list="menuList" mode="route" :query="$route.query"></TabMenu>
     <router-view></router-view>
@@ -91,30 +98,14 @@ export default {
   margin-top: 30px;
 
   .album-banner {
-    margin: 0 30px;
-    display: flex;
+    margin: 0 30px 20px;
 
-    img {
-      width: 180px;
-      border: 1px solid #f2f2f2;
-      border-radius: 5px;
-    }
+    .button-group {
+      margin: 10px 0;
+      vertical-align: middle;
 
-    .album-info {
-      margin-left: 30px;
-
-      .button-group {
-        margin: 20px 0;
-
-        button {
-          height: 30px;
-          border-radius: 15px;
-          border: 1px solid #dadada;
-          background: white;
-          margin-right: 10px;
-          text-align: center;
-          vertical-align: middle;
-        }
+      button {
+        margin-right: 10px;
       }
     }
   }

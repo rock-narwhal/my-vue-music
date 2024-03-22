@@ -76,8 +76,11 @@ export default {
         </template>
         <template v-slot:others>
           <div class="playlist-other">
-            <div style="margin-bottom: 5px">标签 : <span v-if="playlistInfo.tags">{{ playlistInfo.tags[0] }}</span></div>
-            <div style="margin-bottom: 5px">歌曲 : {{ playlistInfo.trackCount }} 播放 : {{ numFormat(playlistInfo.playCount) }}</div>
+            <div style="margin-bottom: 5px">标签 : <span v-if="playlistInfo.tags">{{ playlistInfo.tags[0] }}</span>
+            </div>
+            <div style="margin-bottom: 5px">歌曲 : {{ playlistInfo.trackCount }} 播放 :
+              {{ numFormat(playlistInfo.playCount) }}
+            </div>
             <div>简介 :</div>
           </div>
         </template>
@@ -93,8 +96,7 @@ export default {
   margin-top: 30px;
 
   .playlist-banner {
-    margin: 0 30px;
-    margin-bottom: 20px;
+    margin: 0 30px 20px;
 
     img {
       width: 30px;
@@ -116,7 +118,8 @@ export default {
     .button-group {
       margin: 10px 0;
       vertical-align: middle;
-      button{
+
+      button {
         margin-right: 10px;
       }
     }

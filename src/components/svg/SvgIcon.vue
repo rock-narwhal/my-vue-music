@@ -10,14 +10,6 @@ export default {
     className: {
       type: String,
       default: '',
-    },
-    color: {
-      type: String,
-      default: '#333'
-    },
-    fillColor: {
-      type: String,
-      default: 'none'
     }
   },
   computed: {
@@ -34,6 +26,8 @@ export default {
     verticalAlign() {
       if (this.className.includes('font-20')) {
         return '-0.25em'
+      } else if(this.className.includes('font-18')){
+        return '-0.2em'
       } else {
         return '-0.15em'
       }
@@ -43,7 +37,7 @@ export default {
 </script>
 
 <template>
-  <svg :class="svgClass" :style="{fill: fillColor,stroke: color, 'vertical-align': verticalAlign}" aria-hidden="true">
+  <svg :class="svgClass" :style="{'vertical-align': verticalAlign}" aria-hidden="true">
     <use :xlink:href="iconName"></use>
   </svg>
 </template>
