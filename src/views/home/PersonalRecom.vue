@@ -99,6 +99,8 @@ export default {
     },
     // 跳转到首页/歌单
     toPlayList() {
+      // /homePage/playlist
+      this.$router.push('/homePage/playlist')
     },
     //跳转到播放列表详情
     toPlayListDetail(id) {

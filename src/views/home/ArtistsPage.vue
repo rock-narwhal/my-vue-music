@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     toArtistDetail(id) {
-
+      this.$router.push(`/detail/artist?id=${id}`)
     },
     // 更改查询条件 查询歌手
     async queryArtists(option) {

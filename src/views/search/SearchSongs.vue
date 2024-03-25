@@ -1,6 +1,5 @@
 <script>
 import {cloudSearch} from "@/api/api_music";
-import {timeConvert} from "@/util/dateUtil";
 import MusicList from "@/components/list/MusicList.vue";
 
 export default {
