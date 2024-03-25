@@ -4,7 +4,7 @@
     <!--    精品歌单banner-->
     <div class="banner" v-if="hasHighQuality">
       <img class="img-back" :src="highInfo.coverImgUrl">
-      <img class="img-front img-80" :src="highInfo.coverImgUrl">
+      <img class="img-front img-80" :src="highInfo.coverImgUrl +'param?400y400'">
       <div class="info-wrap">
         <div>
           <button class="circle-btn">

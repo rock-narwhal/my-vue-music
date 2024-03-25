@@ -69,12 +69,21 @@ export default {
       this.$emit('clickImg',id)
     },
     picUrl(item) {
-      if(this.type === 'playlist'){
-        return `${item.picUrl ? item.picUrl : item.coverImgUrl}`
+      if(this.type === 'playlist'){ //去掉多余的参数，加上?param=600y600
+        let url = item.picUrl ? item.picUrl : item.coverImgUrl
+        if(!url){
+          return ''
+        }
+        let ind = url.indexOf('?')
+        if(ind > 0){
+          url = url.substring(0, ind)
+        }
+        url += '?param=400y400'
+        return url
       }else if(this.type === 'artist'){
-        return `${item.img1v1Url}`
+        return `${item.img1v1Url}?param=400y400`
       }else if (this.type === 'album') {
-        return `${item.picUrl}`
+        return `${item.picUrl}?param=400y400`
       }
     },
     load(){

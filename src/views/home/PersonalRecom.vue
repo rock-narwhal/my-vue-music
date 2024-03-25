@@ -102,11 +102,7 @@ export default {
     },
     //跳转到播放列表详情
     toPlayListDetail(id) {
-      // if(typeof id === 'number'){
-      //   this.$router.push({
-      //     path:''
-      //   })
-      // }
+      this.$router.push(`/detail/playlist?id=${id}`)
     },
     // 播放选中的专辑/歌单
     playRecommend(id) {

@@ -61,13 +61,14 @@ export default {
     async getTopList(){
       const res = await getTopList()
       if(res.code !== 200) return
-      this.topList = res.list
+      this.topList = res.list.slice(0, 39)
     },
     //播放歌单
     clickPlay(id){
     },
     //跳转到榜单详情
     toListDetail(id){
+      this.$router.push(`/detail/playlist?id=${id}`)
     }
   }
 }
