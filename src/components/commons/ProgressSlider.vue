@@ -26,7 +26,7 @@ export default {
     }
   },
   mounted() {
-    if(this.vertical){
+    if (this.vertical) {
       // 初始化样式 垂直进度条
       this.$refs.sliderWrapper.style.height = this.size + 'px'
       this.$refs.sliderWrapper.style.width = '36px'
@@ -41,7 +41,7 @@ export default {
       this.$refs.sliderBtn.style.bottom = this.sliderPosition
       this.$refs.sliderBtn.style.left = '-17px'
 
-    }else{
+    } else {
       //初始化样式，水平进度条
       this.$refs.sliderWrapper.style.width = this.size + 'px'
       this.$refs.sliderWrapper.style.height = '36px'
@@ -55,18 +55,18 @@ export default {
       this.$refs.sliderBtn.style.top = '-17px'
     }
   },
-  watch:{
-    sliderSize(val){
-      if(this.vertical){
+  watch: {
+    sliderSize(val) {
+      if (this.vertical) {
         this.$refs.sliderBar.style.height = val
-      }else{
+      } else {
         this.$refs.sliderBar.style.width = val
       }
     },
-    sliderPosition(val){
-      if(this.vertical){
+    sliderPosition(val) {
+      if (this.vertical) {
         this.$refs.sliderBtn.style.bottom = val
-      }else{
+      } else {
         this.$refs.sliderBtn.style.left = val
       }
     }
@@ -99,9 +99,9 @@ export default {
     doChangeProgress(event) {
       if (this.isActive) {
         let offset = 0
-        if(this.vertical){
-          offset =  this.size - (event.clientY - this.$refs.sliderRunaway.getBoundingClientRect().y)
-        }else{
+        if (this.vertical) {
+          offset = this.size - (event.clientY - this.$refs.sliderRunaway.getBoundingClientRect().y)
+        } else {
           offset = event.clientX - this.$refs.sliderRunaway.getBoundingClientRect().x
         }
         if (offset < 0) offset = 0
@@ -114,7 +114,7 @@ export default {
       this.$emit('input', val)
     },
     // 进度条拖动/点击动作结束，通知外部改变进度
-    afterChange(){
+    afterChange() {
       this.$emit('onChange', this.value)
     }
   }
@@ -147,6 +147,7 @@ export default {
   &:hover {
     height: 5px;
   }
+
   position: relative;
   background-color: #e0e0e0;
 
