@@ -3,19 +3,19 @@
 export default {
   name: "ProgressSlider",
   props: {
-    value: {
+    value: { //进度条绑定进度值
       type: Number,
       require: true
     },
-    width: {
+    size: { //进度条长度
       type: Number,
-      default: 360
+      default: 180
     },
-    vertical: {
+    vertical: { //进度条水平/垂直，默认水平
       type: Boolean,
       default: false
     },
-    color: {
+    color: { //进度条和滑块颜色
       type: String,
       default: '#ec4141'
     }
@@ -23,57 +23,114 @@ export default {
   data() {
     return {
       isActive: false,
-      originX: 0,
-      originY: 0,
-      initX: 0,
-      initY: 0,
+    }
+  },
+  mounted() {
+    if(this.vertical){
+      // 初始化样式 垂直进度条
+      this.$refs.sliderWrapper.style.height = this.size + 'px'
+      this.$refs.sliderWrapper.style.width = '36px'
+      this.$refs.sliderWrapper.style.justifyContent = 'center'
+
+      this.$refs.sliderRunaway.style.height = '100%'
+      this.$refs.sliderRunaway.style.width = '3px'
+      this.$refs.sliderBar.style.width = '100%'
+      this.$refs.sliderBar.style.height = this.sliderSize
+      this.$refs.sliderBar.style.position = 'absolute'
+      this.$refs.sliderBar.style.bottom = '0'
+      this.$refs.sliderBtn.style.bottom = this.sliderPosition
+      this.$refs.sliderBtn.style.left = '-17px'
+
+    }else{
+      //初始化样式，水平进度条
+      this.$refs.sliderWrapper.style.width = this.size + 'px'
+      this.$refs.sliderWrapper.style.height = '36px'
+      this.$refs.sliderWrapper.style.alignItems = 'center'
+
+      this.$refs.sliderRunaway.style.width = '100%'
+      this.$refs.sliderRunaway.style.height = '3px'
+      this.$refs.sliderBar.style.height = '100%'
+      this.$refs.sliderBar.style.width = this.sliderSize
+      this.$refs.sliderBtn.style.left = this.sliderPosition
+      this.$refs.sliderBtn.style.top = '-17px'
+    }
+  },
+  watch:{
+    sliderSize(val){
+      if(this.vertical){
+        this.$refs.sliderBar.style.height = val
+      }else{
+        this.$refs.sliderBar.style.width = val
+      }
+    },
+    sliderPosition(val){
+      if(this.vertical){
+        this.$refs.sliderBtn.style.bottom = val
+      }else{
+        this.$refs.sliderBtn.style.left = val
+      }
     }
   },
   computed: {
-    sliderWidth() {
+    sliderSize() {
       return this.value + '%'
     },
     sliderPosition() {
-      return (-1800 / this.width + this.value) + '%'
+      return (-1800 / this.size + this.value) + '%'
     }
   },
   methods: {
-    mouseDown(event) {
+    mouseDown() {
       this.isActive = true
-      this.originX = event.clientX
-      this.originY = event.clientY
-      this.initX = this.$refs.sliderBtn.offsetLeft
-      this.initY = this.$refs.sliderBtn.offsetTop
     },
     mouseUp() {
       this.isActive = false
+      this.afterChange()
     },
     mouseMove(event) {
+      this.doChangeProgress(event)
+    },
+    clickSlider(event) {
+      this.isActive = true
+      this.doChangeProgress(event)
+      this.isActive = false
+      this.afterChange()
+    },
+    doChangeProgress(event) {
       if (this.isActive) {
-        let deltaX = event.clientX - this.originX
-        let left = this.initX + deltaX
-        if (left < -18) left = -18
-        if (left > this.width - 18) left = this.width - 18
-        let p = (left + 18) * 100 / this.width
+        let offset = 0
+        if(this.vertical){
+          offset =  this.size - (event.clientY - this.$refs.sliderRunaway.getBoundingClientRect().y)
+        }else{
+          offset = event.clientX - this.$refs.sliderRunaway.getBoundingClientRect().x
+        }
+        if (offset < 0) offset = 0
+        if (offset > this.size) offset = this.size
+        let p = (offset) * 100 / this.size
         this.onchangeValue(p)
       }
     },
     onchangeValue(val) {
       this.$emit('input', val)
+    },
+    // 进度条拖动/点击动作结束，通知外部改变进度
+    afterChange(){
+      this.$emit('onChange', this.value)
     }
   }
 }
 </script>
 
 <template>
-  <div class="slider-wrapper" :style="{width: width + 'px'}">
-    <div class="slider-runaway">
-      <div class="slider-bar" :style="{backgroundColor: color, width: sliderWidth}"></div>
-      <div class="slider-btn-wrapper" ref="sliderBtn" :style="{left: sliderPosition}"
+  <div class="slider-wrapper" ref="sliderWrapper">
+    <div class="slider-runaway" @click="clickSlider" ref="sliderRunaway">
+      <div class="slider-bar" ref="sliderBar" :style="{backgroundColor: color}"></div>
+      <div class="slider-btn-wrapper" ref="sliderBtn"
            @mousedown.stop="mouseDown"
            @mouseup.stop="mouseUp"
            @mousemove.stop="mouseMove"
-           @mouseleave.stop="mouseUp">
+           @mouseleave.stop="mouseUp"
+           @click.stop="1">
         <div class="slider-button" :style="{backgroundColor: color}"></div>
       </div>
     </div>
@@ -82,22 +139,18 @@ export default {
 
 <style scoped lang="less">
 .slider-wrapper {
-  margin-left: 30px;
-  margin-top: 30px;
-  height: 36px;
   position: relative;
+  display: flex;
 }
 
 .slider-runaway {
-  width: 100%;
-  height: 3px;
+  &:hover {
+    height: 5px;
+  }
+  position: relative;
   background-color: #e0e0e0;
-  position: absolute;
-  top: 16px;
 
   .slider-bar {
-    height: 100%;
-    position: absolute;
   }
 
   .slider-btn-wrapper {
@@ -105,8 +158,6 @@ export default {
     width: 36px;
     background-color: transparent;
     position: absolute;
-    top: -16px;
-    left: -18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,11 +166,11 @@ export default {
       width: 8px;
       height: 8px;
       border-radius: 50%;
+      display: none;
     }
 
     &:hover .slider-button {
-      width: 10px;
-      height: 10px;
+      display: block;
     }
   }
 }
