@@ -23,6 +23,7 @@ export default {
   data() {
     return {
       isActive: false,
+      progress: 0,
     }
   },
   mounted() {
@@ -56,6 +57,11 @@ export default {
     }
   },
   watch: {
+    value(val){
+      if(!this.isActive){
+        this.progress = val
+      }
+    },
     sliderSize(val) {
       if (this.vertical) {
         this.$refs.sliderBar.style.height = val
@@ -73,10 +79,10 @@ export default {
   },
   computed: {
     sliderSize() {
-      return this.value + '%'
+      return this.progress + '%'
     },
     sliderPosition() {
-      return (-1800 / this.size + this.value) + '%'
+      return (-1800 / this.size + this.progress) + '%'
     }
   },
   methods: {
@@ -84,8 +90,8 @@ export default {
       this.isActive = true
     },
     mouseUp() {
-      this.isActive = false
       this.afterChange()
+      this.isActive = false
     },
     mouseMove(event) {
       this.doChangeProgress(event)
@@ -93,8 +99,8 @@ export default {
     clickSlider(event) {
       this.isActive = true
       this.doChangeProgress(event)
-      this.isActive = false
       this.afterChange()
+      this.isActive = false
     },
     doChangeProgress(event) {
       if (this.isActive) {
@@ -106,8 +112,8 @@ export default {
         }
         if (offset < 0) offset = 0
         if (offset > this.size) offset = this.size
-        let p = (offset) * 100 / this.size
-        this.onchangeValue(p)
+        this.progress = (offset) * 100 / this.size
+        this.onchangeValue(Math.ceil(this.progress))
       }
     },
     onchangeValue(val) {
@@ -115,7 +121,9 @@ export default {
     },
     // 进度条拖动/点击动作结束，通知外部改变进度
     afterChange() {
-      this.$emit('onChange', this.value)
+      if(this.isActive){
+        this.$emit('onChange', this.value)
+      }
     }
   }
 }
