@@ -2,7 +2,6 @@
   <div class="player-bar">
     <!--    左侧区域-->
     <div class="left-area">
-      <transition>
         <div class="cover-wrap" :class="{'hide-cover': hiddenCover}">
           <!--      按钮区域-->
           <div class="left-btn">
@@ -42,7 +41,6 @@
             </div>
           </div>
         </div>
-      </transition>
     </div>
 
     <!--    音乐控制条-->
@@ -65,7 +63,7 @@
       </div>
       <div class="progress-bar">
         <span class="font-12">{{ timeConvert(playingInfo.current) }}</span>
-        <el-slider v-model="progress" class="time-slider" :show-tooltip="false" @change="changeProgress"></el-slider>
+        <ProgressSlider v-model="progress" :size="350" @onChange="changeProgress"></ProgressSlider>
         <span class="font-12">{{ timeConvert(playingInfo.duration / 1000) }}</span>
       </div>
     </div>
@@ -81,9 +79,13 @@
 import {mapState} from "vuex";
 import {timeConvert} from "@/util/dateUtil";
 import {getMusicUrl} from "@/api/api_music";
+import ProgressSlider from "@/components/commons/ProgressSlider.vue";
 
 export default {
   name: 'FooterBar',
+  components:{
+    ProgressSlider
+  },
   data() {
     return {
       hiddenCover: false, //封面和按钮切换
@@ -295,16 +297,6 @@ export default {
       span {
         line-height: 36px;
         color: #999999;
-      }
-
-      .time-slider {
-        width: 350px;
-
-        .el-slider__bar {
-          .el-slider__button-wrapper.hover, .el-slider__button:hover {
-            cursor: default;
-          }
-        }
       }
     }
   }
