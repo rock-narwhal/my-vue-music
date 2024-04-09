@@ -63,7 +63,7 @@
       </div>
       <div class="progress-bar">
         <span class="font-12">{{ timeConvert(playingInfo.current) }}</span>
-        <ProgressSlider v-model="progress" :size="350" @onChange="changeProgress"></ProgressSlider>
+        <ProgressSlider :size="360" v-model="progress" class="time-slider" @onChange="changeProgress"></ProgressSlider>
         <span class="font-12">{{ timeConvert(playingInfo.duration / 1000) }}</span>
       </div>
     </div>
@@ -83,9 +83,7 @@ import ProgressSlider from "@/components/commons/ProgressSlider.vue";
 
 export default {
   name: 'FooterBar',
-  components:{
-    ProgressSlider
-  },
+  components: {ProgressSlider},
   data() {
     return {
       hiddenCover: false, //封面和按钮切换
@@ -116,7 +114,9 @@ export default {
         if (this.playingInfo.pause) {
           audio.pause()
         } else {
-          audio.play()
+          audio.play().catch(e =>{
+            console.log(e)
+          })
         }
       })
 
