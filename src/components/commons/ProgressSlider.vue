@@ -24,41 +24,49 @@ export default {
     return {
       isActive: false,
       progress: 0,
+      sliderWrapperStyle: {},
+      sliderRunawayStyle: {},
+      sliderBarStyle: {backgroundColor: this.color},
+      sliderBtnStyle: {},
     }
   },
-  mounted() {
+  created() {
     if (this.vertical) {
       // 初始化样式 垂直进度条
-      this.$refs.sliderWrapper.style.height = this.size + 'px'
-      this.$refs.sliderWrapper.style.width = '36px'
-      this.$refs.sliderWrapper.style.justifyContent = 'center'
+      this.sliderWrapperStyle.height = this.size + 'px'
+      this.sliderWrapperStyle.width = '36px'
+      this.sliderWrapperStyle.justifyContent = 'center'
 
-      this.$refs.sliderRunaway.style.height = '100%'
-      this.$refs.sliderRunaway.style.width = '3px'
-      this.$refs.sliderBar.style.width = '100%'
-      this.$refs.sliderBar.style.height = this.sliderSize
-      this.$refs.sliderBar.style.position = 'absolute'
-      this.$refs.sliderBar.style.bottom = '0'
-      this.$refs.sliderBtn.style.bottom = this.sliderPosition
-      this.$refs.sliderBtn.style.left = '-17px'
+      this.sliderRunawayStyle.height = '100%'
+      this.sliderRunawayStyle.width = '3px'
 
+      this.sliderBarStyle.width = '100%'
+      this.sliderBarStyle.height = this.sliderSize
+      this.sliderBarStyle.position = 'absolute'
+      this.sliderBarStyle.bottom = '0'
+
+      this.sliderBtnStyle.bottom = this.sliderPosition
+      this.sliderBtnStyle.left = '-17px'
     } else {
       //初始化样式，水平进度条
-      this.$refs.sliderWrapper.style.width = this.size + 'px'
-      this.$refs.sliderWrapper.style.height = '36px'
-      this.$refs.sliderWrapper.style.alignItems = 'center'
 
-      this.$refs.sliderRunaway.style.width = '100%'
-      this.$refs.sliderRunaway.style.height = '3px'
-      this.$refs.sliderBar.style.height = '100%'
-      this.$refs.sliderBar.style.width = this.sliderSize
-      this.$refs.sliderBtn.style.left = this.sliderPosition
-      this.$refs.sliderBtn.style.top = '-17px'
+      this.sliderWrapperStyle.width = this.size + 'px'
+      this.sliderWrapperStyle.height = '36px'
+      this.sliderWrapperStyle.alignItems = 'center'
+
+      this.sliderRunawayStyle.width = '100%'
+      this.sliderRunawayStyle.height = '3px'
+
+      this.sliderBarStyle.height = '100%'
+      this.sliderBarStyle.width = this.sliderSize
+
+      this.sliderBtnStyle.left = this.sliderPosition
+      this.sliderBtnStyle.top = '-17px'
     }
   },
   watch: {
-    value(val){
-      if(!this.isActive){
+    value(val) {
+      if (!this.isActive) {
         this.progress = val
       }
     },
@@ -121,7 +129,7 @@ export default {
     },
     // 进度条拖动/点击动作结束，通知外部改变进度
     afterChange() {
-      if(this.isActive){
+      if (this.isActive) {
         this.$emit('onChange', this.value)
       }
     }
@@ -130,10 +138,10 @@ export default {
 </script>
 
 <template>
-  <div class="slider-wrapper" ref="sliderWrapper">
-    <div class="slider-runaway" @click="clickSlider" ref="sliderRunaway">
-      <div class="slider-bar" ref="sliderBar" :style="{backgroundColor: color}"></div>
-      <div class="slider-btn-wrapper" ref="sliderBtn"
+  <div class="slider-wrapper" ref="sliderWrapper" :style="sliderWrapperStyle">
+    <div class="slider-runaway" @click="clickSlider" ref="sliderRunaway" :style="sliderRunawayStyle">
+      <div class="slider-bar" ref="sliderBar" :style="sliderBarStyle"></div>
+      <div class="slider-btn-wrapper" ref="sliderBtn" :style="sliderBtnStyle"
            @mousedown.stop="mouseDown"
            @mouseup.stop="mouseUp"
            @mousemove.stop="mouseMove"
